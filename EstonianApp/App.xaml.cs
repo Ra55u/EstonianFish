@@ -1,4 +1,4 @@
-﻿using EstonianApp.Views;
+﻿using Views;
 
 namespace EstonianApp;
 

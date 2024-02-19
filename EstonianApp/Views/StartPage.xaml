@@ -2,8 +2,14 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.StartPage"
-             Title="StartPage">
+             Title="Fish in Estonia">
+    
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#666" Offset="0.0"/>
+            <GradientStop Color="#000" Offset="1.0"/>
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
-    
-    
+
 </ContentPage>
