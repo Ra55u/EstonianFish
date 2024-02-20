@@ -10,6 +10,4 @@
             <GradientStop Color="#000" Offset="1.0"/>
         </LinearGradientBrush>
     </ContentPage.Background>
-
-    sss
-</ContentPage>
+    

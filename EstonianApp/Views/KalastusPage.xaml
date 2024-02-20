@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Views.KalastusPage"
+             Title="Kalastus Leht">
+
+<Grid>
+        <Grid
+        x:Name="MenuContainer">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#666" Offset="0.0" />
+                <GradientStop Color="#000" Offset="1.0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+    </Grid>
+
+     
+        <Grid
+        x:Name="MainContentGrid"
+        Padding="24,52,24,0"
+        BackgroundColor="{StaticResource PageBackgroundColor}"
+        ColumnDefinitions="*, Auto"
+        RowDefinitions="Auto, *">
+
+            <VerticalStackLayout
+            Spacing="4"
+            Grid.Row="0"
+            Grid.Column="0"
+            VerticalOptions="Center">
+
+                <Label 
+                Style="{StaticResource PageHeaderStyle}"
+                Text="Kalastus"/>
+
+            </VerticalStackLayout>
+        </Grid>
+    
+</ContentPage>
