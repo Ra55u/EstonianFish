@@ -28,7 +28,7 @@
               Style="{StaticResource ButtonStyle}"
               Text="Veekogud"
               HorizontalOptions="Center"
-              Margin="0,90,0,6"
+              Margin="0,90,50,6"
               Clicked="Veekogud_Clicked"/>  
             </VerticalStackLayout>
 
