@@ -7,7 +7,7 @@ public partial class StartPage : ContentPage
         InitializeComponent();
     }
     async void Veekogud_Clicked(System.Object sender, System.EventArgs e)
-            => Application.Current.MainPage = new NavigationPage(new Veekogud());
+            => Application.Current.MainPage = new NavigationPage(new BodyOfWater());
 
 
 }

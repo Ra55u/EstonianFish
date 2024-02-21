@@ -5,18 +5,14 @@
              Title="Fish in Estonia">
 
     <Grid>
-        <ContentPage.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#666" Offset="0.0"/>
-                <GradientStop Color="#000" Offset="1.0"/>
-            </LinearGradientBrush>
-        </ContentPage.Background>
+
+        
         <Grid
-    x:Name="MainContentGrid"
-    Padding="24,52,24,0"
-    BackgroundColor="{StaticResource PageBackgroundColor}"
-    ColumnDefinitions="*, Auto"
-    RowDefinitions="Auto, *">
+            x:Name="MainContentGrid"
+            Padding="24,52,24,0"
+            BackgroundColor="{StaticResource PageBackgroundColor}"
+            ColumnDefinitions="*, Auto"
+            RowDefinitions="Auto, *">
 
             <VerticalStackLayout
         Spacing="4"
@@ -29,11 +25,11 @@
             Text="Home Page"/>
 
                 <Button 
-          Style="{StaticResource ButtonStyle}"
-          Text="Fishing"
-          HorizontalOptions="Center"
-          Margin="0,900,0,6"
-          Clicked="Veekogud_Clicked"/>
+              Style="{StaticResource ButtonStyle}"
+              Text="Veekogud"
+              HorizontalOptions="Center"
+              Margin="0,90,0,6"
+              Clicked="Veekogud_Clicked"/>  
             </VerticalStackLayout>
 
         </Grid>
