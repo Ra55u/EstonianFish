@@ -6,10 +6,20 @@
     
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#666" Offset="0.0"/>
-            <GradientStop Color="#000" Offset="1.0"/>
+            <GradientStop Color="AliceBlue" Offset="0.0"/>
+            <GradientStop Color="DarkSeaGreen Offset="1.0"/>
         </LinearGradientBrush>
     </ContentPage.Background>
 
-
+    <StackLayout>
+        <Button Text="Click to Rotate Text!"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked" />
+        <Label x:Name="label"
+               Text="Click the Button above"
+               FontSize="18"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
+    </StackLayout>
 </ContentPage>
