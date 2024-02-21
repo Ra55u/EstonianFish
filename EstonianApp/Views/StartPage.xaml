@@ -3,23 +3,41 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.StartPage"
              Title="Fish in Estonia">
-    
-    <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="AliceBlue" Offset="0.0"/>
-            <GradientStop Color="DarkSeaGreen" Offset="1.0" />
-        </LinearGradientBrush>
-    </ContentPage.Background>
 
-    <StackLayout>
-        <Button Text="Click to Rotate Text!"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Clicked="OnButtonClicked" />
-        <Label x:Name="label"
-               Text="Click the Button above"
-               FontSize="18"
-               VerticalOptions="Center"
-               HorizontalOptions="Center" />
-    </StackLayout>
+    <Grid>
+        <ContentPage.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <GradientStop Color="#666" Offset="0.0"/>
+                <GradientStop Color="#000" Offset="1.0"/>
+            </LinearGradientBrush>
+        </ContentPage.Background>
+        <Grid
+    x:Name="MainContentGrid"
+    Padding="24,52,24,0"
+    BackgroundColor="{StaticResource PageBackgroundColor}"
+    ColumnDefinitions="*, Auto"
+    RowDefinitions="Auto, *">
+
+            <VerticalStackLayout
+        Spacing="4"
+        Grid.Row="0"
+        Grid.Column="0"
+        VerticalOptions="Center">
+
+                <Label 
+            Style="{StaticResource PageHeaderStyle}"
+            Text="Home Page"/>
+
+                <Button 
+          Style="{StaticResource ButtonStyle}"
+          Text="Fishing"
+          HorizontalOptions="Center"
+          Margin="0,900,0,6"
+          Clicked="Veekogud_Clicked"/>
+            </VerticalStackLayout>
+
+        </Grid>
+    </Grid>
+
 </ContentPage>
+    

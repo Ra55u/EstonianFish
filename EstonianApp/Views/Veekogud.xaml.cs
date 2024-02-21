@@ -1,8 +1,8 @@
 namespace Views;
 
-public partial class NewPage1 : ContentPage
+public partial class Veekogud : ContentPage
 {
-	public NewPage1()
+	public Veekogud()
 	{
 		InitializeComponent();
 	}
