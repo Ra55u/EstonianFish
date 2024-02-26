@@ -80,11 +80,65 @@
         Grid.Column="0"
         VerticalOptions="Center">   
         
-            
-            
-            
         </VerticalStackLayout>
+        
+        <VerticalStackLayout
+            Spacing="18">
 
 
+            <!--Planet name-->
+            <Label 
+                Margin="0,-24,0,0"
+                Style="{StaticResource AllPlanetHeaderSubtitleStyle}"
+                Text="{Binding Name}"/>
+
+            <!--Divider-->
+            <Rectangle 
+                HorizontalOptions="Fill"
+                HeightRequest="2"
+                Stroke="Transparent"
+                Fill="{StaticResource LightBorderColor}"/>
+
+            <!--Planet Info-->
+            <Label 
+                LineBreakMode="WordWrap"
+                Style="{StaticResource PlanetDetailsTextStyle}"
+                Text="{Binding Description}"/>
+
+            <!--Divider-->
+            <Rectangle 
+                HorizontalOptions="Fill"
+                HeightRequest="2"
+                Stroke="Transparent"
+                Fill="{StaticResource LightBorderColor}"/>
+
+            <CollectionView 
+                Margin="0,-6,0,0"
+                HeightRequest="400"
+                WidthRequest="400"
+                ItemsSource="{Binding Images}">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout
+                        Orientation="Vertical"
+                        ItemSpacing="16">
+
+                    </LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Image
+                            Source="{Binding .}"
+                            Aspect="AspectFill"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                        </Image>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </VerticalStackLayout>
     </Grid>
 </ContentPage>
