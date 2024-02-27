@@ -6,9 +6,9 @@ using EstonianApp.Models;
 
 namespace Services
 {
-    internal static class FishesService
+    internal static class FishServices
     {
-        private static List<Fish> fishes = new()
+        private static List<Fish> fish = new()
         {
             new()
             {

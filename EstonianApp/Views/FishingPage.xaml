@@ -6,72 +6,270 @@
              Title="Kalastus Leht">
 
     <Grid>
-        <Grid.Background>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                <GradientStop Color="#666" Offset="0.0" />
-                <GradientStop Color="#000" Offset="1.0" />
-            </LinearGradientBrush>
-        </Grid.Background>
-
         <Grid
-        Margin="24,52,24,0"
-        ColumnDefinitions="*,*"
+        x:Name="MainContentGrid"
+        Padding="24,52,24,0"
+        BackgroundColor="{StaticResource PageBackgroundColor}"
+        ColumnDefinitions="*, Auto"
         RowDefinitions="Auto,*">
-            
-    <VerticalStackLayout
-    Spacing="4"
-    Grid.Row="0"
-    Grid.Column="0"
-    VerticalOptions="Center">
 
+        <VerticalStackLayout
+        Spacing="3"
+        Grid.Row="0"
+        Grid.Column="0"
+        VerticalOptions="Center">
 
-                <!--Search Box-->
-                <Border
-                 Padding="12,4"
-                 BackgroundColor="#003366"
-                 Stroke="{StaticResource BorderColor}"
-                 HorizontalOptions="Fill"
-                 Margin="0,0,24,0"
-                 HeightRequest="48">
-
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="3" />
-                    </Border.StrokeShape>
-
-                    <Grid HorizontalOptions="Fill"
-           VerticalOptions="Center"
-           ColumnDefinitions="Auto,*"
-           ColumnSpacing="16">
-
-                        <Image 
-             WidthRequest="18"
-             HeightRequest="18"
-             Source="imgsearch.png"
-             Grid.Column="0"
-             VerticalOptions="Center" />
-
-                        <Label 
-             Text="Search"
-             Grid.Column="1"
-             VerticalOptions="Center"
-             VerticalTextAlignment="Center"
-             TextColor="White"
-             Style="{StaticResource MenuLabelStyle}" />
-
-                    </Grid>
-                </Border>
+                <Label
+                TextColor="{StaticResource NormalTextColor}"
+                FontSize="32"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="Õngepüük"/>
+                
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="Igaüks tohib tasuta ja püügiõigust vormistamata ühe"/>
+                
                 <Label 
-            Style="{StaticResource PageHeaderStyle}"
-            Text="Kalastus"/>
+                TextColor="{StaticResource NormalTextColor}"
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="lihtkäsiõngega kala püüda avalikul või avalikult kasutataval"/>
+
                 <Label 
-             Style="{StaticResource PageSubHeaderStyle}"
-             Text="Ühes ööpäevas lubatud maksimaalsed"/>
+                TextColor="{StaticResource NormalTextColor}"
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="veekogul, arvestades keeluaegade, keelukohtade ja"/>
+
                 <Label 
-                Style="{StaticResource PageSubHeaderStyle}"
-                Text="püügikogused harrastuspüügil on:"/>
+                TextColor="{StaticResource NormalTextColor}"
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="kalaliikidele kehtestatud piiranguid."/>
+
             </VerticalStackLayout>
         </Grid>
 
-        
+        <Grid
+        x:Name="MainContentGrid"
+        Padding="24,210"
+        RowDefinitions="Auto,*">
+
+            <VerticalStackLayout
+             Spacing="3"
+             Grid.Row="0"
+             Grid.Column="0"
+             VerticalOptions="Center">
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="Eraomandis oleval veekogul, mis ei ole määratud avalikult"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="kasutatavaks, võib ühe lihtkäsiõngega kala püüda"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="kinnisasja omaniku loal."/>
+
+            </VerticalStackLayout>
+        </Grid>
+
+        <Grid
+        x:Name="MainContentGrid"
+        Padding="24,300"
+        RowDefinitions="Auto,*">
+
+            <VerticalStackLayout
+             Spacing="3"
+             Grid.Row="0"
+             Grid.Column="0"
+             VerticalOptions="Center">
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="Lihtkäsiõng koosneb ridvast, kuni 1,5 ridva pikkusest"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="õngenöörist, üheharulisest konksust, raskusest ja ujukist."/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="Püügil tohib kasutada ainult looduslikku sööta"/>
+
+            </VerticalStackLayout>
+        </Grid>
+
+        <Grid
+        x:Name="MainContentGrid"
+        Padding="24,400"
+        RowDefinitions="Auto,*">
+
+            <VerticalStackLayout
+             Spacing="3"
+             Grid.Row="0"
+             Grid.Column="0"
+             VerticalOptions="Center">
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="32"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="Tasuta püügiõigus"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseRegularLabelStyle}"
+                Text="Püügiõiguse eest ei pea tasuma:"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseRegularLabelStyle}"
+                Text="- alla 16-aastased õpilased (õpilaspilet);"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseRegularLabelStyle}"
+                Text="- pensionärid (pensionitunnistus);"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseRegularLabelStyle}"
+                Text="- õigusvastaselt represseeritud isikud ja represseerituga"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseRegularLabelStyle}"
+                Text="  võrdsustatud isikud (represseeritu tunnistus);"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseRegularLabelStyle}"
+                Text="- puudega isikud (puude raskusastet tõendav dokument);"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseRegularLabelStyle}"
+                Text="- osalise või puuduva töövõimega isikud (osalist või"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseRegularLabelStyle}"
+                Text="  puuduvat töövõimet tõendav dokument)."/>
+
+            </VerticalStackLayout>
+        </Grid>
+
+        <Grid
+        x:Name="MainContentGrid"
+        Padding="24,660"
+        RowDefinitions="Auto,*">
+
+            <VerticalStackLayout
+             Spacing="3"
+             Grid.Row="0"
+             Grid.Column="0"
+             VerticalOptions="Center">
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="NB! Tasuta püügiõigus ei laiene nendele püügivahenditele"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="ja püügikohtadele, kus kalapüügil on nõutud kalastuskaart."/>
+
+            </VerticalStackLayout>
+        </Grid>
+
+        <Grid
+        x:Name="MainContentGrid"
+        Padding="24,730"
+        RowDefinitions="Auto,*">
+
+            <VerticalStackLayout
+             Spacing="3"
+             Grid.Row="0"
+             Grid.Column="0"
+             VerticalOptions="Center">
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="32"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="Kalastuskaart"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="Kalastuskaarti on vaja kui:"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="- püügivahendina kasutatakse nakkevõrku*, õngejada,"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="  kadiskat, vähimõrda või vähinatta*, liivi või kuuritsat;"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="- püük toimub spinningu ja lendõngega Kesk-Eesti"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="  forellijõgedel või Põhja-Eesti lõhe- ja meriforellijõgedel;"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="- püük toimub Endla looduskaitsealal, Matsalu"/>
+
+                <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                FontSize="18"
+                Style="{StaticResource BaseBoldLabelStyle}"
+                Text="  Rahvuspargis või Silma looduskaitsealal*."/>
+
+            </VerticalStackLayout>
+        </Grid>
     </Grid>
 </ContentPage>
