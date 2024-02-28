@@ -9,6 +9,7 @@ namespace EstonianApp.Models
     public class Fish
     {
         public string Name { get; set; }
+        public string Keywords { get; set; }
         public string Subtitle { get; set; }
         public string HeroImage { get; set; }
         public string Description { get; set; }

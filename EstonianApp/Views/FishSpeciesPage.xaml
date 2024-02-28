@@ -123,7 +123,7 @@
                             PlaceholderColor="{StaticResource SearchbarTextColor}"
                             Placeholder="Search your favorite fish"
                             Grid.Column="1"
-                            SearchCommand="{Binding PerformSearch}"
+                            SearchCommand="{Binding SearchAndSortFish}"
                             TextColor="{StaticResource SearchbarTextColor}"
                             BackgroundColor="{StaticResource SearchbarBackgroundColor}"
                             SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>

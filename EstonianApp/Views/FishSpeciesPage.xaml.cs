@@ -1,5 +1,7 @@
+using CoreSpotlight;
 using EstonianApp.Models;
 using EstonianApp.Services;
+using System.Collections.Generic;
 using System.Numerics;
 
 namespace EstonianApp.Views;
@@ -12,6 +14,7 @@ public partial class FishSpeciesPage : ContentPage
 
         lstPopularFishSpecies.ItemsSource = Services.FishService.GetFeaturedFish();
         lstAllFishSpecies.ItemsSource = Services.FishService.GetAllFish();
+        SearchAndSortFish.ItemsSource = Services.FishService.SearchAndSortFish(List <Fish> fishList, string searchQuery);
     }
 
     async void GridArea_Tapped(System.Object sender, System.EventArgs e)
