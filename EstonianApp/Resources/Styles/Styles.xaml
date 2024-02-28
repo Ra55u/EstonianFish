@@ -58,7 +58,7 @@
         <Setter Property="TextColor" Value="{StaticResource NormalTextColor}" />
     </Style>
 
-    <Style TargetType="Label" x:Key="MenuLabelStyle" BasedOn="{StaticResource BaseRegularLabelStyle}">
+    <Style TargetType="Label" x:Key="SearchbarTextColor" BasedOn="{StaticResource BaseRegularLabelStyle}">
         <Setter Property="FontSize" Value="14" />
         <Setter Property="TextColor" Value="#CCCCCC" />
     </Style>

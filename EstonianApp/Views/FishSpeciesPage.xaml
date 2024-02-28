@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EstonianApp.Views.FishSpeciesPage"
              xmlns:models="clr-namespace:EstonianApp.Models"
-             Title="Solar Fish">
+             Title="Fish Species Page">
 
     <Grid>
 
@@ -40,7 +40,7 @@
 
         <Grid
             x:Name="MainContentGrid"
-            Padding="24,52,24,0"
+            Padding="24,0,24,0"
             BackgroundColor="{StaticResource PageBackgroundColor}"
             ColumnDefinitions="*, Auto"
             RowDefinitions="Auto, *">
@@ -51,14 +51,6 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 VerticalOptions="Center">
-
-                <Label 
-                    Style="{StaticResource PageHeaderStyle}"
-                    Text="Let's Explore"/>
-
-                <Label 
-                    Style="{StaticResource PageHeaderSubtitleStyle}"
-                    Text="The solar system"/>
 
             </VerticalStackLayout>
 
@@ -114,7 +106,7 @@
                     <!--Search Box-->
                     <Border
                         Padding="12,4"
-                        BackgroundColor="#33CCCC"
+                        BackgroundColor="{StaticResource SearchbarBackgroundColor}"
                         Stroke="{StaticResource BorderColor}"
                         HorizontalOptions="Fill"
                         Margin="0,0,24,0"
@@ -141,89 +133,24 @@
                                 VerticalOptions="Center"
                                 VerticalTextAlignment="Center"
                                 TextColor="Black"
-                                Style="{StaticResource MenuLabelStyle}" />
+                                Style="{StaticResource SearchbarTextColor}" />
 
                         </Grid>
                     </Border>
 
                     <Label
                         Style="{StaticResource PageSubHeaderStyle}"
-                        Margin="0,12,0,0">
+                        Margin="0,60,0,0">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Most popular..."/>
-                                <Span Text="→" FontSize="20" />
+                                <Span Text="→" FontSize="16" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
 
                     <CollectionView
                         x:Name="lstPopularFishSpecies"
-                        HeightRequest="280"
-                        SelectionMode="Single"
-                        SelectionChanged="Fish_SelectionChanged">
-
-                        <CollectionView.ItemsLayout>
-                            <LinearItemsLayout
-                                Orientation="Horizontal"
-                                ItemSpacing="16" />
-                        </CollectionView.ItemsLayout>
-
-                        <CollectionView.ItemTemplate>
-                            <DataTemplate
-                                x:DataType="models:Fish">
-                                <Border
-                                    VerticalOptions="Fill"
-                                    WidthRequest="220"
-                                    StrokeThickness="0"
-                                    Background="{Binding Background}"
-                                    Padding="20">
-
-                                    <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="24"/>
-                                    </Border.StrokeShape>
-
-                                    <Grid
-                                        RowDefinitions="*, Auto, Auto"
-                                        RowSpacing="4">
-
-                                        <Image 
-                                            Grid.Row="0"
-                                            Source="{Binding HeroImage}"
-                                            Rotation="-30"
-                                            Aspect="AspectFit"
-                                            VerticalOptions="Fill"
-                                            HorizontalOptions="Fill" />
-
-                                        <Label 
-                                            Grid.Row="1"
-                                            Style="{StaticResource FeaturedFishHeaderStyle}"
-                                            Text="{Binding Name}"
-                                            Margin="0,8,0,0"/>
-
-                                        <Label 
-                                            Grid.Row="2"
-                                            Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
-                                            Text="{Binding Subtitle}"/>
-                                    </Grid>
-                                </Border>
-                            </DataTemplate>
-                        </CollectionView.ItemTemplate>
-                    </CollectionView>
-
-                    <Label
-                        Style="{StaticResource PageHeaderStyle}"
-                        Margin="0,12,0,0">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="You may also like..."/>
-                                <Span Text="→" FontSize="20" />
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
-
-                    <CollectionView
-                        x:Name="lstAllFishSpecies"
                         HeightRequest="160"
                         SelectionMode="Single"
                         SelectionChanged="Fish_SelectionChanged">
@@ -231,7 +158,7 @@
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout 
                                 Orientation="Horizontal"
-                                ItemSpacing="16" />
+                                ItemSpacing="10" />
                         </CollectionView.ItemsLayout>
 
                         <CollectionView.ItemTemplate>
@@ -245,7 +172,67 @@
                                     Padding="16">
 
                                     <Border.StrokeShape>
-                                        <RoundRectangle CornerRadius="16" />
+                                        <RoundRectangle CornerRadius="25" />
+                                    </Border.StrokeShape>
+
+                                    <Grid
+                                        RowDefinitions="*, Auto, Auto"
+                                        RowSpacing="4">
+
+                                        <Image 
+                                            Grid.Row="0"
+                                            Source="{Binding HeroImage}"
+                                            Rotation="-30"
+                                            Aspect="AspectFit"
+                                            VerticalOptions="Fill"
+                                            HorizontalOptions="Fill"/>
+                                        <Label
+                                            Grid.Row="1"
+                                            Style="{StaticResource AllFishHeaderStyle}"
+                                            Text="{Binding Name}"
+                                            Margin="0,4,0,0"/>
+                                    </Grid>
+
+                                </Border>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+
+                    <Label
+                        Style="{StaticResource PageSubHeaderStyle}"
+                        Margin="0,60,0,0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="You may also like..."/>
+                                <Span Text="→" FontSize="20" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    
+                    <CollectionView
+                        x:Name="lstAllFishSpecies"
+                        HeightRequest="160"
+                        SelectionMode="Single"
+                        SelectionChanged="Fish_SelectionChanged">
+
+                        <CollectionView.ItemsLayout>
+                            <LinearItemsLayout 
+                                Orientation="Horizontal"
+                                ItemSpacing="10" />
+                        </CollectionView.ItemsLayout>
+
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate
+                                x:DataType="models:Fish">
+                                <Border
+                                    VerticalOptions="Fill"
+                                    WidthRequest="140"
+                                    StrokeThickness="0"
+                                    Background="{Binding Background}"
+                                    Padding="16">
+
+                                    <Border.StrokeShape>
+                                        <RoundRectangle CornerRadius="25" />
                                     </Border.StrokeShape>
 
                                     <Grid
@@ -278,7 +265,7 @@
 
             <Border
                 Padding="16,0"
-                BackgroundColor="#393965"
+                BackgroundColor="#070F2B"
                 Stroke="{StaticResource BorderColor}"
                 HorizontalOptions="Fill"
                 VerticalOptions="End"
@@ -310,7 +297,7 @@
                         Grid.Row="1"
                         Grid.Column="0"
                         HorizontalOptions="Center"
-                        Style="{StaticResource MenuLabelStyle}"/>
+                        Style="{StaticResource SearchbarTextColor}"/>
                     <Image 
                         WidthRequest="30"
                         HeightRequest="30"
@@ -323,7 +310,7 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         HorizontalOptions="Center"
-                        Style="{StaticResource MenuLabelStyle}"/>
+                        Style="{StaticResource SearchbarTextColor}"/>
                     <Image 
                         WidthRequest="30"
                         HeightRequest="30"
@@ -336,7 +323,7 @@
                         Grid.Row="1"
                         Grid.Column="2"
                         HorizontalOptions="Center"
-                        Style="{StaticResource MenuLabelStyle}"/>
+                        Style="{StaticResource SearchbarTextColor}"/>
 
                 </Grid>
 
