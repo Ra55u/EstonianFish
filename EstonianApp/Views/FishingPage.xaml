@@ -53,7 +53,6 @@
         </Grid>
 
         <Grid
-        x:Name="MainContentGrid"
         Padding="24,210"
         RowDefinitions="Auto,*">
 
@@ -85,7 +84,6 @@
         </Grid>
 
         <Grid
-        x:Name="MainContentGrid"
         Padding="24,300"
         RowDefinitions="Auto,*">
 
@@ -117,7 +115,6 @@
         </Grid>
 
         <Grid
-        x:Name="MainContentGrid"
         Padding="24,400"
         RowDefinitions="Auto,*">
 
@@ -135,8 +132,7 @@
 
                 <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                FontSize="18"
-                Style="{StaticResource BaseRegularLabelStyle}"
+                Style="{StaticResource PageSubHeaderStyle}"
                 Text="Püügiõiguse eest ei pea tasuma:"/>
 
                 <Label
@@ -185,7 +181,6 @@
         </Grid>
 
         <Grid
-        x:Name="MainContentGrid"
         Padding="24,660"
         RowDefinitions="Auto,*">
 
@@ -211,7 +206,6 @@
         </Grid>
 
         <Grid
-        x:Name="MainContentGrid"
         Padding="24,730"
         RowDefinitions="Auto,*">
 
@@ -223,50 +217,42 @@
 
                 <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                FontSize="32"
-                Style="{StaticResource BaseBoldLabelStyle}"
+                Style="{StaticResource IntroPageHeaderStyle}"
                 Text="Kalastuskaart"/>
 
                 <Label
-                TextColor="{StaticResource NormalTextColor}" 
-                FontSize="18"
-                Style="{StaticResource BaseBoldLabelStyle}"
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource PageSubHeaderStyle}"
                 Text="Kalastuskaarti on vaja kui:"/>
 
                 <Label
-                TextColor="{StaticResource NormalTextColor}" 
-                FontSize="18"
-                Style="{StaticResource BaseBoldLabelStyle}"
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
                 Text="- püügivahendina kasutatakse nakkevõrku*, õngejada,"/>
 
                 <Label
-                TextColor="{StaticResource NormalTextColor}" 
-                FontSize="18"
-                Style="{StaticResource BaseBoldLabelStyle}"
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
                 Text="  kadiskat, vähimõrda või vähinatta*, liivi või kuuritsat;"/>
 
                 <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                FontSize="18"
-                Style="{StaticResource BaseBoldLabelStyle}"
+                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
                 Text="- püük toimub spinningu ja lendõngega Kesk-Eesti"/>
 
                 <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                FontSize="18"
-                Style="{StaticResource BaseBoldLabelStyle}"
+                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
                 Text="  forellijõgedel või Põhja-Eesti lõhe- ja meriforellijõgedel;"/>
 
                 <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                FontSize="18"
-                Style="{StaticResource BaseBoldLabelStyle}"
+                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
                 Text="- püük toimub Endla looduskaitsealal, Matsalu"/>
 
                 <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                FontSize="18"
-                Style="{StaticResource BaseBoldLabelStyle}"
+                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
                 Text="  Rahvuspargis või Silma looduskaitsealal*."/>
 
             </VerticalStackLayout>
