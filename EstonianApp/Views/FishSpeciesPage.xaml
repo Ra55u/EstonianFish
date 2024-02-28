@@ -105,7 +105,6 @@
 
                     <!--Search Box-->
                     <Border
-                        Padding="12,4"
                         BackgroundColor="{StaticResource SearchbarBackgroundColor}"
                         Stroke="{StaticResource BorderColor}"
                         HorizontalOptions="Fill"
@@ -120,27 +119,21 @@
                               ColumnDefinitions="Auto,*"
                               ColumnSpacing="16">
 
-                            <Image 
-                                WidthRequest="18"
-                                HeightRequest="18"
-                                Source="imgsearch.png"
-                                Grid.Column="0"
-                                VerticalOptions="Center" />
-
-                            <Label 
-                                Text="Search your favorite fish"
-                                Grid.Column="1"
-                                VerticalOptions="Center"
-                                VerticalTextAlignment="Center"
-                                TextColor="Black"
-                                Style="{StaticResource SearchbarTextColor}" />
+                            <SearchBar x:Name="searchBar" 
+                            PlaceholderColor="{StaticResource SearchbarTextColor}"
+                            Placeholder="Search your favorite fish"
+                            Grid.Column="1"
+                            SearchCommand="{Binding PerformSearch}"
+                            TextColor="{StaticResource SearchbarTextColor}"
+                            BackgroundColor="{StaticResource SearchbarBackgroundColor}"
+                            SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
 
                         </Grid>
                     </Border>
 
                     <Label
                         Style="{StaticResource PageSubHeaderStyle}"
-                        Margin="0,60,0,0">
+                        Margin="0,45,0,0">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Most popular..."/>
@@ -158,7 +151,7 @@
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout 
                                 Orientation="Horizontal"
-                                ItemSpacing="10" />
+                                ItemSpacing="12" />
                         </CollectionView.ItemsLayout>
 
                         <CollectionView.ItemTemplate>
@@ -167,6 +160,7 @@
                                 <Border
                                     VerticalOptions="Fill"
                                     WidthRequest="140"
+                                    HeightRequest="150"
                                     StrokeThickness="0"
                                     Background="{Binding Background}"
                                     Padding="16">
@@ -200,25 +194,27 @@
 
                     <Label
                         Style="{StaticResource PageSubHeaderStyle}"
-                        Margin="0,60,0,0">
+                        Margin="0,45,0,0">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="You may also like..."/>
                                 <Span Text="→" FontSize="20" />
                             </FormattedString>
+
                         </Label.FormattedText>
                     </Label>
-                    
+
                     <CollectionView
                         x:Name="lstAllFishSpecies"
-                        HeightRequest="160"
+                        HeightRequest="500"
                         SelectionMode="Single"
                         SelectionChanged="Fish_SelectionChanged">
 
                         <CollectionView.ItemsLayout>
-                            <LinearItemsLayout 
-                                Orientation="Horizontal"
-                                ItemSpacing="10" />
+                            <GridItemsLayout
+                            Orientation="Vertical"
+                            Span="3" 
+                            VerticalItemSpacing="16"/>
                         </CollectionView.ItemsLayout>
 
                         <CollectionView.ItemTemplate>
@@ -226,6 +222,7 @@
                                 x:DataType="models:Fish">
                                 <Border
                                     VerticalOptions="Fill"
+                                    HeightRequest="150"
                                     WidthRequest="140"
                                     StrokeThickness="0"
                                     Background="{Binding Background}"
@@ -262,72 +259,6 @@
                 </VerticalStackLayout>
 
             </ScrollView>
-
-            <Border
-                Padding="16,0"
-                BackgroundColor="#070F2B"
-                Stroke="{StaticResource BorderColor}"
-                HorizontalOptions="Fill"
-                VerticalOptions="End"
-                Margin="0,0,0,20"
-                HeightRequest="90"
-                Grid.Row="1"
-                Grid.Column="0"
-                Grid.ColumnSpan="2">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="45" />
-                </Border.StrokeShape>
-
-                <Grid
-                    HorizontalOptions="Fill"
-                    VerticalOptions="Center"
-                    RowDefinitions="Auto, Auto"
-                    ColumnDefinitions="*,*,*"
-                    RowSpacing="6">
-
-                    <Image 
-                        WidthRequest="30"
-                        HeightRequest="30"
-                        Source="imgexplore.png"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalOptions="Center" />
-                    <Label 
-                        Text="Explore"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource SearchbarTextColor}"/>
-                    <Image 
-                        WidthRequest="30"
-                        HeightRequest="30"
-                        Source="imgfavorite.png"
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalOptions="Center" />
-                    <Label 
-                        Text="Favorite"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource SearchbarTextColor}"/>
-                    <Image 
-                        WidthRequest="30"
-                        HeightRequest="30"
-                        Source="imgprofile.png"
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        HorizontalOptions="Center" />
-                    <Label 
-                        Text="Explore"
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource SearchbarTextColor}"/>
-
-                </Grid>
-
-            </Border>
 
         </Grid>
 
