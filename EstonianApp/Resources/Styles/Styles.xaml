@@ -93,4 +93,8 @@
         <Setter Property="TextColor" Value="{StaticResource NormalTextColor}" />
     </Style>
 
+    <Style TargetType="Label" x:Key="NavbarTextStyle" BasedOn="{StaticResource BaseRegularLabelStyle}">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="TextColor" Value="{StaticResource NormalTextColor}" />
+    </Style>
 </ResourceDictionary>
