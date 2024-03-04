@@ -6,12 +6,13 @@
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#666" Offset="0.0"/>
-            <GradientStop Color="#000" Offset="1.0"/>
+            <GradientStop Color="{StaticResource PageBackgroundColor}" Offset="0.0" />
+            <GradientStop Color="{StaticResource PageBackgroundColor}" Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
 
     <Grid
+        BackgroundColor="{StaticResource PageBackgroundColor}"
         Margin="24,52,24,0"
         ColumnDefinitions="*,*"
         RowDefinitions="Auto,*">
@@ -47,82 +48,82 @@
             <VerticalStackLayout
             Spacing="18">
 
-            <!--Fish image-->
-            <Image 
+                <!--Fish image-->
+                <Image 
                 Source="{Binding HeroImage}"
                 Aspect="AspectFit"
                 HorizontalOptions="Fill"
                 HeightRequest="240"
                 Margin="24,0"/>
 
-            <!--Fish name-->
-            <Label 
+                <!--Fish name-->
+                <Label 
                 Margin="0,-24,0,0"
                 Style="{StaticResource AllFishHeaderSubtitleStyle}"
                 Text="{Binding Name}"/>
 
-            <!--Fish Subtitle-->
-            <Label 
+                <!--Fish Subtitle-->
+                <Label 
                 Margin="0,-12,0,0"
                 Style="{StaticResource PageHeaderSubtitleStyle}"
                 Text="{Binding Subtitle}"/>
 
-            <!--Divider-->
-            <Rectangle 
+                <!--Divider-->
+                <Rectangle 
                 HorizontalOptions="Fill"
                 HeightRequest="2"
                 Stroke="Transparent"
                 Fill="{StaticResource LightBorderColor}"/>
 
-            <!--Fish Info-->
-            <Label 
+                <!--Fish Info-->
+                <Label 
                 LineBreakMode="WordWrap"
                 Style="{StaticResource FishDetailsTextStyle}"
                 Text="{Binding Description}"/>
 
-            <!--Divider-->
-            <Rectangle 
+                <!--Divider-->
+                <Rectangle 
                 HorizontalOptions="Fill"
                 HeightRequest="2"
                 Stroke="Transparent"
                 Fill="{StaticResource LightBorderColor}"/>
 
-            <!--Fish Images-->
-            <Label 
+                <!--Fish Images-->
+                <Label 
                 Style="{StaticResource FishHeaderSubtitleStyle}"
                 Text="Gallery"/>
 
-            <CollectionView 
+                <CollectionView 
                 Margin="0,-6,0,0"
                 HeightRequest="400"
                 WidthRequest="400"
                 ItemsSource="{Binding Images}">
 
-                <CollectionView.ItemsLayout>
-                    <LinearItemsLayout
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout
                         Orientation="Vertical"
                         ItemSpacing="16">
 
-                    </LinearItemsLayout>
-                </CollectionView.ItemsLayout>
+                        </LinearItemsLayout>
+                    </CollectionView.ItemsLayout>
 
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Image
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Image
                             Source="{Binding .}"
                             Aspect="AspectFill"
                             HorizontalOptions="Center"
                             VerticalOptions="Center">
-                        </Image>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
+                            </Image>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
 
                 </CollectionView>
 
             </VerticalStackLayout>
-        
+
         </ScrollView>
-    
+
     </Grid>
-    
+
 </ContentPage>

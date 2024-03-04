@@ -104,28 +104,27 @@
                     Spacing="12">
 
                     <!--Search Box-->
-                    <Border
-                        BackgroundColor="{StaticResource SearchbarBackgroundColor}"
-                        Stroke="{StaticResource BorderColor}"
-                        HorizontalOptions="Fill"
-                        Margin="0,0,24,0"
-                        HeightRequest="48">
+                    <Border BackgroundColor="{StaticResource SearchbarBackgroundColor}"
+                    Stroke="{StaticResource BorderColor}"
+                    HorizontalOptions="Fill"
+                    Margin="0,0,24,0"
+                    HeightRequest="48">
                         <Border.StrokeShape>
                             <RoundRectangle CornerRadius="6" />
                         </Border.StrokeShape>
 
                         <Grid HorizontalOptions="Fill"
-                              VerticalOptions="Center"
-                              ColumnDefinitions="Auto,*"
-                              ColumnSpacing="16">
+                            VerticalOptions="Center"
+                            ColumnDefinitions="Auto,*"
+                            ColumnSpacing="16">
 
                             <SearchBar x:Name="searchBar" 
                             PlaceholderColor="{StaticResource SearchbarTextColor}"
                             Placeholder="Search your favorite fish"
                             Grid.Column="1"
-                            SearchCommand="{Binding SearchAndSortFish}"
                             TextColor="{StaticResource SearchbarTextColor}"
                             BackgroundColor="{StaticResource SearchbarBackgroundColor}"
+                            SearchCommand="{Binding SearchCommand}"
                             SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
 
                         </Grid>
@@ -184,6 +183,7 @@
                                             Grid.Row="1"
                                             Style="{StaticResource AllFishHeaderStyle}"
                                             Text="{Binding Name}"
+                                            TextColor="{StaticResource NormalTextColor}"
                                             Margin="0,4,0,0"/>
                                     </Grid>
 
@@ -246,6 +246,7 @@
                                         <Label
                                             Grid.Row="1"
                                             Style="{StaticResource AllFishHeaderStyle}"
+                                            TextColor="{StaticResource NormalTextColor}"
                                             Text="{Binding Name}"
                                             Margin="0,4,0,0"/>
                                     </Grid>
