@@ -77,49 +77,91 @@
                 Grid.Row="0"
                 Grid.Column="0"
                 VerticalOptions="Center">
-
-                    <Label
-                    Style="{StaticResource PageHeaderStyle}"
-                    Text="Otsi veekogu.."/>
-
-
-
-                </VerticalStackLayout>
-
-                <!-- Profile Pic -->
-                <Border
-                WidthRequest="56"
-                HeightRequest="56"
-                VerticalOptions="Center"
-                HorizontalOptions="End"
-                Stroke="{StaticResource LightBorderColor}"
-                StrokeThickness="6"
-                Grid.Row="0"
-                Grid.Column="1">
-
+                    
+                <Border BackgroundColor="{StaticResource SearchbarBackgroundColor}"
+                    Stroke="{StaticResource BorderColor}"
+                    HorizontalOptions="Fill"
+                    Margin="0,0,24,0"
+                    HeightRequest="48">
                     <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="28"/>
+                        <RoundRectangle CornerRadius="6" />
                     </Border.StrokeShape>
 
+                    <Grid HorizontalOptions="Fill"
+                            VerticalOptions="Center"
+                            ColumnDefinitions="Auto,*"
+                            ColumnSpacing="16">
 
+                        <SearchBar x:Name="searchBar" 
+                            PlaceholderColor="{StaticResource SearchbarTextColor}"
+                            Placeholder="Otsi veekogu..."
+                            Grid.Column="1"
+                            TextColor="{StaticResource SearchbarTextColor}"
+                            BackgroundColor="{StaticResource SearchbarBackgroundColor}"
+                            SearchCommand="{Binding SearchCommand}"
+                            SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
 
-                    <Image
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    WidthRequest="50"
-                    HeightRequest="50"
-                    Source="apipic.png">
-                        <Image.Clip>
-                            <EllipseGeometry
-                            Center="25,25"
-                            RadiusX="25"
-                            RadiusY="25"/>
-                        </Image.Clip>
-                    </Image>
-
+                    </Grid>
                 </Border>
 
-                <!-- Main Content ScrollView -->
+
+
+                <!--Järved-->
+                <Label 
+        Text="Järved"
+        TextColor="{StaticResource NormalTextColor}"
+        FontSize="35"
+        HorizontalOptions="Start"
+        VerticalOptions="Center"
+        Margin="12,0,0,180"/>
+
+                <RoundRectangle
+        WidthRequest="180"
+        HeightRequest="170"
+        Fill="{StaticResource SecondaryBackgroundColor}"
+        CornerRadius="25"
+        HorizontalOptions="Start"
+        VerticalOptions="Center"
+        Margin="0,-150,0,0"/>
+
+                <RoundRectangle
+        WidthRequest="180"
+        HeightRequest="170"
+        Fill="{StaticResource SecondaryBackgroundColor}"
+        CornerRadius="25"
+        HorizontalOptions="Start"
+        VerticalOptions="Center"
+        Margin="200,-175,0,0"/>
+
+                <!--Jõed-->
+                <Label 
+        Text="Jõed"
+        TextColor="{StaticResource NormalTextColor}"
+        FontSize="35"
+        HorizontalOptions="Start"
+        VerticalOptions="Center"
+        Margin="12,0,0,180"/>
+
+                <RoundRectangle
+        WidthRequest="180"
+        HeightRequest="170"
+        Fill="{StaticResource SecondaryBackgroundColor}"
+        CornerRadius="25"
+        HorizontalOptions="Start"
+        VerticalOptions="Center"
+        Margin="0,-150,0,0"/>
+
+                <RoundRectangle
+        WidthRequest="180"
+        HeightRequest="170"
+        Fill="{StaticResource SecondaryBackgroundColor}"
+        CornerRadius="25"
+        HorizontalOptions="Start"
+        VerticalOptions="Center"
+        Margin="200,-175,0,0"/>
+
+            </VerticalStackLayout>
+
                 <ScrollView
                 Grid.Row="1"
                 Grid.Column="0"
@@ -131,41 +173,7 @@
                     <VerticalStackLayout
                     Spacing="12">
 
-                        <!-- Search Box -->
-                        <Border
-                        Padding="12,4"
-                        BackgroundColor="#33CCCCCC"
-                        Stroke="{StaticResource BorderColor}"
-                        HorizontalOptions="Fill"
-                        Margin="0,0,24,0"
-                        HeightRequest="48">
-                            <Border.StrokeShape>
-                                <RoundRectangle CornerRadius="6"/>
-                            </Border.StrokeShape>
 
-                            <Grid
-                            HorizontalOptions="Fill"
-                            VerticalOptions="Center"
-                            ColumnDefinitions="Auto,*"
-                            ColumnSpacing="16">
-
-                                <Image
-                                WidthRequest="18"
-                                HeightRequest="18"
-                                Source="imgsearch.png"
-                                Grid.Column="0"
-                                VerticalOptions="Center" />
-
-                                <Label
-                                Text="Otsi veekogusi..."
-                                Grid.Column="1"
-                                VerticalOptions="Center"
-                                VerticalTextAlignment="Center"
-                                Style="{StaticResource MenuLabelStyle}" />
-
-                            </Grid>
-
-                        </Border>
 
                         <!--<SearchBar
                         ios:SearchBar.SearchBarStyle="Minimal"
@@ -181,78 +189,153 @@
 
                 </ScrollView>
 
-                <!-- Bottom Tab Bar -->
-                <Border
-                Padding="16,0"
-                BackgroundColor="#393965"
-                Stroke="{StaticResource BorderColor}"
-                HorizontalOptions="Fill"
-                VerticalOptions="End"
-                Margin="0,0,0,20"
-                HeightRequest="90"
-                Grid.Row="1"
-                Grid.Column="0"
-                Grid.ColumnSpan="2">
-                    <Border.StrokeShape>
-                        <RoundRectangle CornerRadius="45"/>
-                    </Border.StrokeShape>
 
-                    <Grid
-                    HorizontalOptions="Fill"
-                    VerticalOptions="Center"
-                    RowDefinitions="Auto,Auto"
-                    ColumnDefinitions="*,*,*"
-                    RowSpacing="6">
 
-                        <Image
-                        WidthRequest="30"
-                        HeightRequest="30"
-                        Source="imgexplore.png"
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        HorizontalOptions="Center" />
-                        <Label
-                        Text="Avaleht"
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource MenuLabelStyle}" />
-
-                        <Image
-                        WidthRequest="30"
-                        HeightRequest="30"
-                        Source="imgfavorite.png"
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        HorizontalOptions="Center" />
-                        <Label
-                        Text="Veekogud"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource MenuLabelStyle}" />
-
-                        <Image
-                        WidthRequest="30"
-                        HeightRequest="30"
-                        Source="imgprofile.png"
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        HorizontalOptions="Center" />
-                        <Label
-                        Text="Kalastamine"
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource MenuLabelStyle}" />
-                            
-
-                    </Grid>
-
-                </Border>
 
             </Grid>
+        <!--NAVBAR-->
+        <Grid>
+            <!--navbar background-->
+            <Border
+            BackgroundColor="{StaticResource SecondaryBackgroundColor}"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Margin="0,0,0,-50"
+            HeightRequest="145">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="55"/>
+                </Border.StrokeShape>
+            </Border>
 
+            <!--navbar icons and labels-->
+            <Grid
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            RowDefinitions="Auto,Auto"
+            ColumnDefinitions="*,*,*,*"
+            RowSpacing="3"
+            ColumnSpacing="4"
+            Margin="0,0,0,5"
+            Padding="10,0">
+
+                <!--Avaleht-->
+                <Image
+                WidthRequest="40"
+                HeightRequest="40"
+                Source="home.png"
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                Margin="0,-4,0,5"/>
+                <Label
+                Text="Avaleht"
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                Style="{StaticResource NavbarTextStyle}"
+                Margin="0,-4,0,5"/>
+
+                <!--Veekogud-->
+                <Image
+                WidthRequest="40"
+                HeightRequest="40"
+                Source="water.png"
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalOptions="Center" 
+                Margin="0,-4,0,5"/>
+                <Label
+                Text="Veekogud"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                Style="{StaticResource NavbarTextStyle}"
+                Margin="0,-4,0,5"/>
+
+                <!--Kalastamine-->
+                <Image
+                WidthRequest="35"
+                HeightRequest="35"
+                Source="hook.png"
+                Grid.Row="0"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                Margin="0,-5,0,5"/>
+                <Label
+                Text="Kalastamine"
+                Grid.Row="1"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                Style="{StaticResource NavbarTextStyle}" 
+                Margin="0,-4,0,5"/>
+
+                <!--Kalad-->
+                <Image
+                WidthRequest="40"
+                HeightRequest="40"
+                Source="fish.png"
+                Grid.Row="0"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                Margin="0,-4,0,5"/>
+                <Label
+                Text="Kalad"
+                Grid.Row="1"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                Style="{StaticResource NavbarTextStyle}"
+                Margin="0,-4,0,5"/>
+            </Grid>
+
+            <!--navbar buttons-->
+            <Grid
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            RowDefinitions="Auto,Auto"
+            ColumnDefinitions="*,*,*,*"
+            RowSpacing="3"
+            ColumnSpacing="4"
+            Margin="0,0,0,0"
+            Padding="0,0">
+
+                <!--Avaleht-->
+                <Button
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                HeightRequest="93"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Clicked="home_clicked"/>
+
+                <!--Veekogud-->
+                <Button
+                Grid.RowSpan="2"
+                Grid.Column="1"
+                HeightRequest="93"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Clicked="water_clicked"/>
+
+                <!--Kalastamine-->
+                <Button
+                Grid.RowSpan="2"
+                Grid.Column="2"
+                HeightRequest="93"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Clicked="water_clicked"/>
+
+                <!--Kalad-->
+                <!--<Button
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                HeightRequest="93"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Clicked="fish_Clicked"/>-->
+            </Grid>
+        </Grid>
+        <!--Navbar end-->
         </Grid>
 
     </ContentPage>
