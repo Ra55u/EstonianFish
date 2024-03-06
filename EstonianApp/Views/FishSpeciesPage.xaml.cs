@@ -32,4 +32,7 @@ public partial class FishSpeciesPage : ContentPage
     {
         await Navigation.PushAsync(new FishDetailsPage(e.CurrentSelection.First() as Fish));
     }
+    async void kalastus_Clicked(System.Object sender, System.EventArgs e)
+    => Application.Current.MainPage = new NavigationPage(new EstonianApp.Views.FishSpeciesPage());
+
 }
