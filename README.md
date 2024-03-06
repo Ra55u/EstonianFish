@@ -1,6 +1,6 @@
-Rasmus Kasemaa,
-Patrick Sabul,
-Sten-Patrick Meerits,
-Artur Müürsepp
+Rasmus Kasemaa Kalastamine,
+Patrick Sabul Veekogud,
+Sten-Patrick Meerits Kalaliigid,
+Artur Müürsepp Koduleht
 
 TARpe22

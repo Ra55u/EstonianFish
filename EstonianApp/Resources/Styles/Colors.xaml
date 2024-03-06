@@ -4,11 +4,10 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <Color x:Key="FrameBackgroundColor">#F1EFF0</Color>
-    <Color x:Key="BorderColor">Transparent</Color>
-    <Color x:Key="DarkTextColor">#252525</Color>
-    <Color x:Key="ButtonBackgroundColor">#eb5757</Color>
-    <Color x:Key="LightTextColor">#d5d5d5</Color>
-    <Color x:Key="PageBackgroundColor">#191932</Color>
-    <Color x:Key="LightBorderColor">#d5d5d5</Color>
+    <Color x:Key="PageBackgroundColor">#070F2B</Color>
+    <Color x:Key="SecondaryBackgroundColor">#1B1A55</Color> <!--SecondaryBackgroundColor on nt navbari jaoks-->
+    <Color x:Key="SearchbarBackgroundColor">#535C91</Color>
+    <Color x:Key="SearchbarTextColor">#1B1A55</Color>
+    <Color x:Key="NormalTextColor">#DEDDFF</Color>
+    <Color x:Key="ScrollbarColor">#535C91</Color>
 </ResourceDictionary>
