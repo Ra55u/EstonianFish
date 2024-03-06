@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstonianApp.Views.FishDetailsPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="{StaticResource PageBackgroundColor}" Offset="0.0" />
+            <GradientStop Color="{StaticResource PageBackgroundColor}" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid
+        BackgroundColor="{StaticResource PageBackgroundColor}"
+        Margin="24,52,24,0"
+        ColumnDefinitions="*,*"
+        RowDefinitions="Auto,*">
+
+        <ImageButton 
+            WidthRequest="24"
+            HeightRequest="24"
+            Source="imgback.png"
+            Grid.Row="0"
+            Grid.Column="0"
+            HorizontalOptions="Start"
+            VerticalOptions="Center"
+            Clicked="BackButton_Clicked"/>
+
+        <!--Main content scrollview-->
+        <ScrollView
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            HorizontalScrollBarVisibility="Never"
+            VerticalScrollBarVisibility="Never"
+            Margin="0,16,0,0">
+
+            <VerticalStackLayout
+            Spacing="18">
+
+                <!--Fish image-->
+                <Image 
+                Source="{Binding HeroImage}"
+                Aspect="AspectFit"
+                HorizontalOptions="Fill"
+                HeightRequest="240"
+                Margin="24,0"/>
+
+                <!--Fish name-->
+                <Label 
+                Margin="0,-24,0,0"
+                Style="{StaticResource AllFishHeaderSubtitleStyle}"
+                Text="{Binding Name}"/>
+
+                <!--Fish Subtitle-->
+                <Label 
+                Margin="0,-12,0,0"
+                Style="{StaticResource PageHeaderSubtitleStyle}"
+                Text="{Binding Subtitle}"/>
+
+                <!--Divider-->
+                <Rectangle 
+                HorizontalOptions="Fill"
+                HeightRequest="2"
+                Stroke="Transparent"
+                Fill="{StaticResource LightBorderColor}"/>
+
+                <!--Fish Info-->
+                <Label 
+                LineBreakMode="WordWrap"
+                Style="{StaticResource FishDetailsTextStyle}"
+                Text="{Binding Description}"/>
+
+                <!--Divider-->
+                <Rectangle 
+                HorizontalOptions="Fill"
+                HeightRequest="2"
+                Stroke="Transparent"
+                Fill="{StaticResource LightBorderColor}"/>
+
+                <!--Fish Images-->
+                <Label 
+                Style="{StaticResource FishHeaderSubtitleStyle}"
+                Text="Gallery"/>
+
+                <CollectionView 
+                Margin="0,-6,0,0"
+                HeightRequest="400"
+                WidthRequest="400"
+                ItemsSource="{Binding Images}">
+
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout
+                        Orientation="Vertical"
+                        ItemSpacing="16">
+
+                        </LinearItemsLayout>
+                    </CollectionView.ItemsLayout>
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Image
+                            Source="{Binding .}"
+                            Aspect="AspectFill"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center">
+                            </Image>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
