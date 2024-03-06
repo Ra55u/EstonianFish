@@ -8,6 +8,8 @@ public partial class StartPage : ContentPage
     }
     async void Veekogud_Clicked(System.Object sender, System.EventArgs e)
             => Application.Current.MainPage = new NavigationPage(new BodyOfWater());
+    async void kalastus_Clicked(System.Object sender, System.EventArgs e)
+        => Application.Current.MainPage = new NavigationPage(new BodyOfWater());
 
 
 }

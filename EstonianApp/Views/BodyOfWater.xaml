@@ -212,7 +212,7 @@
                         Grid.Column="0"
                         HorizontalOptions="Center" />
                         <Label
-                        Text="Explore"
+                        Text="Avaleht"
                         Grid.Row="1"
                         Grid.Column="0"
                         HorizontalOptions="Center"
@@ -226,7 +226,7 @@
                         Grid.Column="1"
                         HorizontalOptions="Center" />
                         <Label
-                        Text="Favorite"
+                        Text="Veekogud"
                         Grid.Row="1"
                         Grid.Column="1"
                         HorizontalOptions="Center"
@@ -240,11 +240,12 @@
                         Grid.Column="2"
                         HorizontalOptions="Center" />
                         <Label
-                        Text="Profile"
+                        Text="Kalastamine"
                         Grid.Row="1"
                         Grid.Column="2"
                         HorizontalOptions="Center"
                         Style="{StaticResource MenuLabelStyle}" />
+                            
 
                     </Grid>
 
