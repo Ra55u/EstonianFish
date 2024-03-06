@@ -118,7 +118,8 @@
                                             Style="{StaticResource AllFishHeaderStyle}"
                                             Text="{Binding Name}"
                                             TextColor="{StaticResource NormalTextColor}"
-                                            Margin="0,4,0,0"/>
+                                            Margin="0,4,0,0"
+                                            HorizontalTextAlignment="Center"/>
                                     </Grid>
 
                                 </Border>
@@ -182,7 +183,8 @@
                                             Style="{StaticResource AllFishHeaderStyle}"
                                             TextColor="{StaticResource NormalTextColor}"
                                             Text="{Binding Name}"
-                                            Margin="0,4,0,0"/>
+                                            Margin="0,4,0,0"
+                                            HorizontalTextAlignment="Center"/>
                                     </Grid>
 
                                 </Border>

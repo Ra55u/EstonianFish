@@ -24,7 +24,8 @@
             Grid.Column="0"
             HorizontalOptions="Start"
             VerticalOptions="Center"
-            Clicked="BackButton_Clicked"/>
+            Clicked="BackButton_Clicked"
+            BackgroundColor="{StaticResource SecondaryBackgroundColor}"/>
 
         <!--Main content scrollview-->
         <ScrollView
