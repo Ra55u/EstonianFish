@@ -8,12 +8,13 @@ namespace EstonianApp.Services
         private static List<Fish> fish = new()
         {
 
-            new()
+
+                new()
                 {
                     Name = "Ahven",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Ahven.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -22,14 +23,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
-            new()
+                new()
                 {
                     Name = "Haug",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Haug.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -38,14 +37,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Latikas",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Latikas.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -54,14 +51,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Linask",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Linask.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -70,14 +65,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Säinas",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Säinas.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -86,14 +79,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Angerjas",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Angerjas.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -102,14 +93,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Forell",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Forell.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -118,14 +107,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Lõhe",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Lõhe.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -134,14 +121,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Siig",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Siig.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -150,14 +135,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Vingerjas",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Vingerjas.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -166,14 +149,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Vimb",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Vimb.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -182,14 +163,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
-                new()
+               new()
                 {
                     Name = "Kiisk",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Kiisk.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -198,14 +177,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Räim",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Räim.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -214,14 +191,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Tursk",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Tursk.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -230,14 +205,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Heeringas",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Heeringas.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -246,14 +219,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Kilu",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Kilu.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -262,14 +233,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Särg",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Särg.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -278,14 +247,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Särk",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Särk.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -294,14 +261,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Kuldkala",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Kuldkala.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -310,14 +275,12 @@ namespace EstonianApp.Services
 
                     }
                 },
-
-
                 new()
                 {
                     Name = "Okassilm",
                     Keywords="",
                     Subtitle = "",
-                    HeroImage = "",
+                    HeroImage = "Okassilm.jpg",
                     Description = "",
                     AccentColorStart = Color.FromArgb("#1B1A55"),
                     AccentColorEnd = Color.FromArgb("#1B1A55"),
@@ -326,7 +289,6 @@ namespace EstonianApp.Services
 
                     }
                 }
-        
         };
 
         public static List<Fish> GetFeaturedFish()
