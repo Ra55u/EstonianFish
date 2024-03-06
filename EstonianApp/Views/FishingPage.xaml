@@ -451,6 +451,21 @@
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Talipüügil võib kasutada kuni viite sikutit."/>
 
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Kalastusluba ei hõlma vähipüüki."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Kalastamine on keelatud kõikidel veekogudel alates"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="  1. aprillist kuni 31. maini."/>
+
                 </VerticalStackLayout>
             </Grid>
 
