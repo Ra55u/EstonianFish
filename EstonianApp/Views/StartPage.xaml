@@ -173,7 +173,8 @@
                 Grid.Column="0"
                 HeightRequest="93"
                 BackgroundColor="Transparent"
-                BorderColor="Transparent"/>
+                BorderColor="Transparent"
+                Clicked="home_clicked"/>
 
                 <!--Veekogud-->
                 <Button
@@ -181,7 +182,8 @@
                 Grid.Column="1"
                 HeightRequest="93"
                 BackgroundColor="Transparent"
-                BorderColor="Transparent"/>
+                BorderColor="Transparent"
+                Clicked="water_clicked"/>
 
                 <!--Kalastamine-->
                 <Button
@@ -198,7 +200,8 @@
                 Grid.Column="3"
                 HeightRequest="93"
                 BackgroundColor="Transparent"
-                BorderColor="Transparent"/>
+                BorderColor="Transparent"
+                Clicked="fish_Clicked"/>
             </Grid>
         </Grid>
         <!--Navbar end-->
