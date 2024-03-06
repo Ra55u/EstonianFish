@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.FishingPage"
               xmlns:models="clr-namespace:EstonianApp.Models">
-
+<!--Scrollbar-->
     <ScrollView
         Grid.Row="1"
         Grid.Column="0"
@@ -16,7 +16,7 @@
         BackgroundColor="{StaticResource PageBackgroundColor}"
         ColumnDefinitions="*, Auto"
         RowDefinitions="Auto,*">
-
+<!--image-->
                 <Border
                 VerticalOptions="Start"
                 StrokeThickness="0">
@@ -32,7 +32,7 @@
                 WidthRequest="500"
                 HeightRequest="280"/>
                 </Border>
-
+                <!--Õngepüük-->
                 <VerticalStackLayout
             Padding="0,255"
             Spacing="3"
@@ -42,8 +42,7 @@
 
                     <Label
                 TextColor="{StaticResource NormalTextColor}"
-                FontSize="32"
-                Style="{StaticResource BaseBoldLabelStyle}"
+                Style="{StaticResource IntroPageHeaderStyle}"
                 Text="Õngepüük"/>
 
                     <Label
@@ -134,7 +133,7 @@
 
                 </VerticalStackLayout>
             </Grid>
-
+<!--Tasuta Püügiõigus-->
             <Grid
         Padding="24,640"
         RowDefinitions="Auto,*">
@@ -225,7 +224,7 @@
 
                 </VerticalStackLayout>
             </Grid>
-
+<!--Kalastus Kaart-->
             <Grid
         Padding="24,960"
         RowDefinitions="Auto,*">
@@ -248,33 +247,209 @@
 
                     <Label
                 TextColor="{StaticResource NormalTextColor}"
-                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- püügivahendina kasutatakse nakkevõrku*, õngejada,"/>
 
                     <Label
                 TextColor="{StaticResource NormalTextColor}"
-                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  kadiskat, vähimõrda või vähinatta*, liivi või kuuritsat;"/>
 
                     <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- püük toimub spinningu ja lendõngega Kesk-Eesti"/>
 
                     <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  forellijõgedel või Põhja-Eesti lõhe- ja meriforellijõgedel;"/>
 
                     <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- püük toimub Endla looduskaitsealal, Matsalu"/>
 
                     <Label
                 TextColor="{StaticResource NormalTextColor}" 
-                Style="{StaticResource FeaturedPlanetHeaderSubtitleStyle}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  Rahvuspargis või Silma looduskaitsealal*."/>
+
+                </VerticalStackLayout>
+            </Grid>
+<!--Kalastus Reeglid-->
+            <Grid
+        Padding="24,1200"
+        RowDefinitions="Auto,*">
+
+                <VerticalStackLayout
+             Spacing="3"
+             Grid.Row="0"
+             Grid.Column="0"
+             VerticalOptions="Center">
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                Style="{StaticResource IntroPageHeaderStyle}"
+                Text="Kalastus reeglid"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="Reeglid on loodud jätkusuutliku kalapüügi tagamiseks"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="tulevastele põlvedele. Suured röövkalad nagu haug ja koha,"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="samuti väiksemad ahvenad, aitavad hoida valgete kalade"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="särje ja latika varusid kontrolli all. See mõjutab positiivselt"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="vee ökosüsteemi vähendades eutrofeerumist."/>
+
+                </VerticalStackLayout>
+            </Grid>
+
+            <Grid
+        Padding="24,1380"
+        RowDefinitions="Auto,*">
+
+                <VerticalStackLayout
+             Spacing="3"
+             Grid.Row="0"
+             Grid.Column="0"
+             VerticalOptions="Center">
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="Kalastaja on kohustatud teadma kalastusalade piire. Mais-"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="maalt kala püüdes kehtib avaliku juurdepääsu õigus; seega"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="on keelatud siseneda selgelt eraomandusse kuuluvatele"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="maa-aladele. Kaldalt kalastamise kontrolli teostavad regu-"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="laarselt Maakonna ametist määratud kalastusinspektorid."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}" 
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="Regulatsioonide ja Kalastusseaduse rikkumistest teatatakse"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="politseile ja kalastusvahendid võidakse konfiskeerida, kui"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="see loetakse vajalikuks."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Kalastamine on lubatud ainult kehtiva kalastusloa alusel."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Kalastusluba tuleb kalastamisel alati kaasas kanda ja"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="  näidata nõudmisel kalastusinspektorile."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Kala võib püüda ainult erakasutuseks ja seda ei ole"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="  lubatud müüa."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Igal kalastuspäeval võib püüda maksimaalselt kuni kolm"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="  röövkala (haug ja koha)."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Üle 35 cm ahvenad tuleb tagasi vette lasta. Igal kalastus-"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="  päeval võib püüda välja kuni viis ahvenat."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Haugi ja koha piirsuurused on 45-70 cm (st neist suur-"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="  ustest väiksemaid ja suuremaid kalu ei tohi välja püüda)."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Tõugjas ja angerjas tuleb pärast kinnipüüdmist eranditult"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="  tagasi vette lasta."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Lubatud on ainult õngeridva või spnninguga õngitsemine,"/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="  vertikaalne landipüük, talipüük ja landi järelvedamine."/>
+
+                    <Label
+                TextColor="{StaticResource NormalTextColor}"
+                Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
+                Text="- Talipüügil võib kasutada kuni viite sikutit."/>
 
                 </VerticalStackLayout>
             </Grid>
