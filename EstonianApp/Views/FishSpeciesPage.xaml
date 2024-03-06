@@ -2,39 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EstonianApp.Views.FishSpeciesPage"
-             xmlns:models="clr-namespace:EstonianApp.Models"
-             Title="Fish Species Page">
+             xmlns:models="clr-namespace:EstonianApp.Models">
 
     <Grid>
-
-        <!--Menu-->
-        <Grid
-            x:Name="MenuContainer">
-
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#666" Offset="0.0" />
-                    <GradientStop Color="#000" Offset="1.0" />
-                </LinearGradientBrush>
-            </Grid.Background>
-
-            <Grid.GestureRecognizers>
-                <TapGestureRecognizer Tapped="GridArea_Tapped" />
-            </Grid.GestureRecognizers>
-
-            <VerticalStackLayout
-                Margin="0,52,24,0"
-                HorizontalOptions="End"
-                Spacing="20">
-
-                <Label
-                    Text="MENU"
-                    Style="{StaticResource PageHeaderStyle}"
-                    HorizontalOptions="End" />
-
-            </VerticalStackLayout>
-
-        </Grid>
 
         <!--Main Content-->
 
@@ -53,42 +23,6 @@
                 VerticalOptions="Center">
 
             </VerticalStackLayout>
-
-            <!--Api picture-->
-
-            <Border
-                WidthRequest="56"
-                HeightRequest="56"
-                VerticalOptions="Center"
-                HorizontalOptions="End"
-                Stroke="{StaticResource LightBorderColor}"
-                StrokeThickness="6"
-                Grid.Row="0"
-                Grid.Column="1">
-
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="28" />
-                </Border.StrokeShape>
-
-                <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="ProfilePic_Clicked" />
-                </Border.GestureRecognizers>
-
-                <Image 
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    WidthRequest="50"
-                    HeightRequest="50"
-                    Source="apipic.png">
-
-                    <Image.Clip>
-                        <EllipseGeometry 
-                            Center="25,25"
-                            RadiusX="25"
-                            RadiusY="25" />
-                    </Image.Clip>
-                </Image>
-            </Border>
 
             <!--Main content scroll-->
 
@@ -374,7 +308,8 @@
                 Grid.Column="0"
                 HeightRequest="93"
                 BackgroundColor="Transparent"
-                BorderColor="Transparent"/>
+                BorderColor="Transparent"
+                Clicked="home_clicked"/>
 
                 <!--Veekogud-->
                 <Button
@@ -382,7 +317,8 @@
                 Grid.Column="1"
                 HeightRequest="93"
                 BackgroundColor="Transparent"
-                BorderColor="Transparent"/>
+                BorderColor="Transparent"
+                Clicked="fish_Clicked"/>
 
                 <!--Kalastamine-->
                 <Button
@@ -391,7 +327,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="kalastus_Clicked"/>
+                Clicked="fish_Clicked"/>
 
                 <!--Kalad-->
                 <Button
@@ -399,7 +335,8 @@
                 Grid.Column="3"
                 HeightRequest="93"
                 BackgroundColor="Transparent"
-                BorderColor="Transparent"/>
+                BorderColor="Transparent"
+                Clicked="fish_Clicked"/>
             </Grid>
         </Grid>
         <!--Navbar end-->
