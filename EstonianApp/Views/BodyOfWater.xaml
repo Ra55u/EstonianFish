@@ -63,6 +63,7 @@
             </Grid>
 
             <!-- Main Content -->
+            
             <Grid
             x:Name="MainContentGrid"
             Padding="24,52,24,0"
@@ -107,58 +108,7 @@
 
 
                 <!--Järved-->
-                <Label 
-        Text="Järved"
-        TextColor="{StaticResource NormalTextColor}"
-        FontSize="35"
-        HorizontalOptions="Start"
-        VerticalOptions="Center"
-        Margin="12,0,0,180"/>
 
-                <RoundRectangle
-        WidthRequest="180"
-        HeightRequest="170"
-        Fill="{StaticResource SecondaryBackgroundColor}"
-        CornerRadius="25"
-        HorizontalOptions="Start"
-        VerticalOptions="Center"
-        Margin="0,-150,0,0"/>
-
-                <RoundRectangle
-        WidthRequest="180"
-        HeightRequest="170"
-        Fill="{StaticResource SecondaryBackgroundColor}"
-        CornerRadius="25"
-        HorizontalOptions="Start"
-        VerticalOptions="Center"
-        Margin="200,-175,0,0"/>
-
-                <!--Jõed-->
-                <Label 
-        Text="Jõed"
-        TextColor="{StaticResource NormalTextColor}"
-        FontSize="35"
-        HorizontalOptions="Start"
-        VerticalOptions="Center"
-        Margin="12,0,0,180"/>
-
-                <RoundRectangle
-        WidthRequest="180"
-        HeightRequest="170"
-        Fill="{StaticResource SecondaryBackgroundColor}"
-        CornerRadius="25"
-        HorizontalOptions="Start"
-        VerticalOptions="Center"
-        Margin="0,-150,0,0"/>
-
-                <RoundRectangle
-        WidthRequest="180"
-        HeightRequest="170"
-        Fill="{StaticResource SecondaryBackgroundColor}"
-        CornerRadius="25"
-        HorizontalOptions="Start"
-        VerticalOptions="Center"
-        Margin="200,-175,0,0"/>
 
             </VerticalStackLayout>
 
@@ -174,8 +124,60 @@
                     Spacing="12">
 
 
+                    <!--Järved-->
+                    <Label 
+    Text="Järved"
+    TextColor="{StaticResource NormalTextColor}"
+    FontSize="35"
+    HorizontalOptions="Start"
+    VerticalOptions="Center"
+    Margin="12,0,0,180"/>
 
-                        <!--<SearchBar
+                    <RoundRectangle
+    WidthRequest="180"
+    HeightRequest="170"
+    Fill="{StaticResource SecondaryBackgroundColor}"
+    CornerRadius="25"
+    HorizontalOptions="Start"
+    VerticalOptions="Center"
+    Margin="0,-190,0,0"/>
+
+                    <RoundRectangle
+    WidthRequest="180"
+    HeightRequest="170"
+    Fill="{StaticResource SecondaryBackgroundColor}"
+    CornerRadius="25"
+    HorizontalOptions="Start"
+    VerticalOptions="Center"
+    Margin="200,-180,0,0"/>
+
+                    <!--Jõed-->
+                    <Label 
+    Text="Jõed"
+    TextColor="{StaticResource NormalTextColor}"
+    FontSize="35"
+    HorizontalOptions="Start"
+    VerticalOptions="Center"
+    Margin="12,0,0,180"/>
+
+                    <RoundRectangle
+    WidthRequest="180"
+    HeightRequest="170"
+    Fill="{StaticResource SecondaryBackgroundColor}"
+    CornerRadius="25"
+    HorizontalOptions="Start"
+    VerticalOptions="Center"
+    Margin="0,-150,0,0"/>
+
+                    <RoundRectangle
+    WidthRequest="180"
+    HeightRequest="170"
+    Fill="{StaticResource SecondaryBackgroundColor}"
+    CornerRadius="25"
+    HorizontalOptions="Start"
+    VerticalOptions="Center"
+    Margin="200,-180,0,0"/>
+                    <!--<SearchBar
                         ios:SearchBar.SearchBarStyle="Minimal"
                         Placeholder="Search for your favorite planet"
                         FontFamily="MediumFont"
