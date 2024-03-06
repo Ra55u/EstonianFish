@@ -4,7 +4,7 @@
              x:Class="Views.StartPage"
              BackgroundColor="{StaticResource PageBackgroundColor}">
     <Grid>
-        
+
         <!--Populaarsemad kalad-->
         <Label 
         Text="Populaarsemad kalad"
@@ -31,7 +31,7 @@
         VerticalOptions="Start"
         Margin="215,50,0,0"/>
 
-        
+
         <!--Populaarsemad veekogud-->
         <Label 
         Text="Populaarsemad veekogud"
@@ -200,7 +200,7 @@
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"/>
             </Grid>
-        </Grid> <!--Navbar end-->
+        </Grid>
+        <!--Navbar end-->
     </Grid>
 </ContentPage>
-    
