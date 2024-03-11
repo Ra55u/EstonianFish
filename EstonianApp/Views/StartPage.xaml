@@ -183,7 +183,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="water_clicked"/>
+                Clicked="kalastus_Clicked"/>
 
                 <!--Kalastamine-->
                 <Button
@@ -201,7 +201,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="fish_Clicked"/>
+                Clicked="kalastus_Clicked"/>
             </Grid>
         </Grid>
         <!--Navbar end-->
