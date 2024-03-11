@@ -53,13 +53,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\FishingPage.xaml.cs">
-	    <DependentUpon>FishingPage.xaml</DependentUpon>
+	  <Compile Update="Views\FishSearchResultsPage.xaml.cs">
+	    <DependentUpon>FishSearchResultsPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\FishingPage.xaml">
+	  <MauiXaml Update="Views\FishDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\FishSearchResultsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\FishSpeciesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\StartPage.xaml">
