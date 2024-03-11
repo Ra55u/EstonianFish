@@ -10,8 +10,8 @@ public partial class FishingPage : ContentPage
     {
         InitializeComponent();
     }
-    async void BackButton_Clicked(object sender, EventArgs e)
-    {
-        await Navigation.PopAsync();
-    }
+    //async void water_clicked(System.Object sender, System.EventArgs e)
+    //    => Application.Current.MainPage = new NavigationPage(new BodyOfWater());
+    async void home_clicked(System.Object sender, System.EventArgs e)
+        => Application.Current.MainPage = new NavigationPage(new StartPage());
 }

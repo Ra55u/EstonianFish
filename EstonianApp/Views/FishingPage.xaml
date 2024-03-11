@@ -3,20 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.FishingPage"
               xmlns:models="clr-namespace:EstonianApp.Models">
-<!--Scrollbar-->
+    <!--Main content scroll-->
+
     <ScrollView
         Grid.Row="1"
         Grid.Column="0"
-        VerticalScrollBarVisibility="Never">
+        Grid.ColumnSpan="2"
+        HorizontalScrollBarVisibility="Never"
+        VerticalScrollBarVisibility="Never"
+        Margin="0,32,-24,0">
 
         <Grid>
-            <Grid
+
+        <Grid
         x:Name="MainContentGrid"
         Padding="24,50"
         BackgroundColor="{StaticResource PageBackgroundColor}"
         ColumnDefinitions="*, Auto"
         RowDefinitions="Auto,*">
-<!--image-->
+
+
+                <!--image-->
                 <Border
                 VerticalOptions="Start"
                 StrokeThickness="0">
@@ -133,7 +140,7 @@
 
                 </VerticalStackLayout>
             </Grid>
-<!--Tasuta Püügiõigus-->
+            <!--Tasuta Püügiõigus-->
             <Grid
         Padding="24,640"
         RowDefinitions="Auto,*">
@@ -224,7 +231,7 @@
 
                 </VerticalStackLayout>
             </Grid>
-<!--Kalastus Kaart-->
+            <!--Kalastus Kaart-->
             <Grid
         Padding="24,960"
         RowDefinitions="Auto,*">
@@ -277,7 +284,7 @@
 
                 </VerticalStackLayout>
             </Grid>
-<!--Kalastus Reeglid-->
+            <!--Kalastus Reeglid-->
             <Grid
         Padding="24,1200"
         RowDefinitions="Auto,*">
@@ -321,154 +328,298 @@
                 </VerticalStackLayout>
             </Grid>
 
-            <Grid
+                <Grid
         Padding="24,1380"
         RowDefinitions="Auto,*">
 
-                <VerticalStackLayout
+                    <VerticalStackLayout
              Spacing="3"
              Grid.Row="0"
              Grid.Column="0"
              VerticalOptions="Center">
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="Kalastaja on kohustatud teadma kalastusalade piire. Mais-"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="maalt kala püüdes kehtib avaliku juurdepääsu õigus; seega"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="on keelatud siseneda selgelt eraomandusse kuuluvatele"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}" 
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="maa-aladele. Kaldalt kalastamise kontrolli teostavad regu-"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="laarselt Maakonna ametist määratud kalastusinspektorid."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}" 
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="Regulatsioonide ja Kalastusseaduse rikkumistest teatatakse"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="politseile ja kalastusvahendid võidakse konfiskeerida, kui"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="see loetakse vajalikuks."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Kalastamine on lubatud ainult kehtiva kalastusloa alusel."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Kalastusluba tuleb kalastamisel alati kaasas kanda ja"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  näidata nõudmisel kalastusinspektorile."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Kala võib püüda ainult erakasutuseks ja seda ei ole"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  lubatud müüa."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Igal kalastuspäeval võib püüda maksimaalselt kuni kolm"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  röövkala (haug ja koha)."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Üle 35 cm ahvenad tuleb tagasi vette lasta. Igal kalastus-"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  päeval võib püüda välja kuni viis ahvenat."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Haugi ja koha piirsuurused on 45-70 cm (st neist suur-"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  ustest väiksemaid ja suuremaid kalu ei tohi välja püüda)."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Tõugjas ja angerjas tuleb pärast kinnipüüdmist eranditult"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  tagasi vette lasta."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Lubatud on ainult õngeridva või spnninguga õngitsemine,"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  vertikaalne landipüük, talipüük ja landi järelvedamine."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Talipüügil võib kasutada kuni viite sikutit."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Kalastusluba ei hõlma vähipüüki."/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="- Kalastamine on keelatud kõikidel veekogudel alates"/>
 
-                    <Label
+                        <Label
                 TextColor="{StaticResource NormalTextColor}"
                 Style="{StaticResource FeaturedFishHeaderSubtitleStyle}"
                 Text="  1. aprillist kuni 31. maini."/>
 
-                </VerticalStackLayout>
-            </Grid>
+                    </VerticalStackLayout>
+                </Grid>
 
+                <!--NAVBAR-->
+    <Grid>
+        <!--navbar background-->
+        <Border
+            BackgroundColor="{StaticResource SecondaryBackgroundColor}"
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            Margin="0,0,0,-50"
+            HeightRequest="145">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="55"/>
+            </Border.StrokeShape>
+        </Border>
+
+        <!--navbar icons and labels-->
+        <Grid
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            RowDefinitions="Auto,Auto"
+            ColumnDefinitions="*,*,*,*"
+            RowSpacing="3"
+            ColumnSpacing="4"
+            Margin="0,0,0,5"
+            Padding="10,0">
+
+            <!--Avaleht-->
+            <Image
+                WidthRequest="40"
+                HeightRequest="40"
+                Source="home.png"
+                Grid.Row="0"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                Margin="0,-4,0,5"/>
+            <Label
+                Text="Avaleht"
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalOptions="Center"
+                Style="{StaticResource NavbarTextStyle}"
+                Margin="0,-4,0,5"/>
+
+            <!--Veekogud-->
+            <Image
+                WidthRequest="40"
+                HeightRequest="40"
+                Source="water.png"
+                Grid.Row="0"
+                Grid.Column="1"
+                HorizontalOptions="Center" 
+                Margin="0,-4,0,5"/>
+            <Label
+                Text="Veekogud"
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                Style="{StaticResource NavbarTextStyle}"
+                Margin="0,-4,0,5"/>
+
+            <!--Kalastamine-->
+            <Image
+                WidthRequest="35"
+                HeightRequest="35"
+                Source="hook.png"
+                Grid.Row="0"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                Margin="0,-5,0,5"/>
+            <Label
+                Text="Kalastamine"
+                Grid.Row="1"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                Style="{StaticResource NavbarTextStyle}" 
+                Margin="0,-4,0,5"/>
+
+            <!--Kalad-->
+            <Image
+                WidthRequest="40"
+                HeightRequest="40"
+                Source="fish.png"
+                Grid.Row="0"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                Margin="0,-4,0,5"/>
+            <Label
+                Text="Kalad"
+                Grid.Row="1"
+                Grid.Column="3"
+                HorizontalOptions="Center"
+                Style="{StaticResource NavbarTextStyle}"
+                Margin="0,-4,0,5"/>
         </Grid>
+
+        <!--navbar buttons-->
+        <Grid
+            HorizontalOptions="Fill"
+            VerticalOptions="End"
+            RowDefinitions="Auto,Auto"
+            ColumnDefinitions="*,*,*,*"
+            RowSpacing="3"
+            ColumnSpacing="4"
+            Margin="0,0,0,0"
+            Padding="0,0">
+
+            <!--Avaleht-->
+            <Button
+                Grid.RowSpan="2"
+                Grid.Column="0"
+                HeightRequest="93"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Clicked="home_clicked"/>
+
+            <!--Veekogud-->
+            <Button
+                Grid.RowSpan="2"
+                Grid.Column="1"
+                HeightRequest="93"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Clicked="home_clicked"/>
+
+            <!--Kalastamine-->
+            <Button
+                Grid.RowSpan="2"
+                Grid.Column="2"
+                HeightRequest="93"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Clicked="home_clicked"/>
+
+            <!--Kalad-->
+            <Button
+                Grid.RowSpan="2"
+                Grid.Column="3"
+                HeightRequest="93"
+                BackgroundColor="Transparent"
+                BorderColor="Transparent"
+                Clicked="home_clicked"/>
+        </Grid>
+    </Grid>
+    <!--Navbar end-->
+    </Grid>
+
     </ScrollView>
 </ContentPage>
