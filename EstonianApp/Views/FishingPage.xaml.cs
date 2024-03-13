@@ -1,4 +1,3 @@
-using Services;
 using EstonianApp.Models;
 using System.Numerics;
 
@@ -10,8 +9,12 @@ public partial class FishingPage : ContentPage
     {
         InitializeComponent();
     }
-    //async void water_clicked(System.Object sender, System.EventArgs e)
-    //    => Application.Current.MainPage = new NavigationPage(new BodyOfWater());
+    async void fishing_Clicked(System.Object sender, System.EventArgs e)
+            => Application.Current.MainPage = new NavigationPage(new FishingPage());
+    async void fish_Clicked(System.Object sender, System.EventArgs e)
+        => Application.Current.MainPage = new NavigationPage(new FishingPage());
+    async void water_clicked(System.Object sender, System.EventArgs e)
+        => Application.Current.MainPage = new NavigationPage(new StartPage());
     async void home_clicked(System.Object sender, System.EventArgs e)
         => Application.Current.MainPage = new NavigationPage(new StartPage());
 }
