@@ -183,7 +183,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="fish_Clicked"/>
+                Clicked="water_clicked"/>
 
                 <!--Kalastamine-->
                 <Button
@@ -192,7 +192,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="fish_Clicked"/>
+                Clicked="fishing_Clicked"/>
 
                 <!--Kalad-->
                 <Button

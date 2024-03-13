@@ -109,7 +109,6 @@
                                         <Image 
                                             Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Rotation="-30"
                                             Aspect="AspectFit"
                                             VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
@@ -174,9 +173,7 @@
                                         <Image 
                                             Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Rotation="-30"
                                             Aspect="AspectFit"
-                                            VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
                                         <Label
                                             Grid.Row="1"
@@ -189,13 +186,12 @@
 
                                 </Border>
                             </DataTemplate>
-                            
+
                         </CollectionView.ItemTemplate>
 
                     </CollectionView>
 
                 </VerticalStackLayout>
-
             </ScrollView>
 
         </Grid>
@@ -320,7 +316,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="fish_Clicked"/>
+                Clicked="water_clicked"/>
 
                 <!--Kalastamine-->
                 <Button
@@ -329,7 +325,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="fish_Clicked"/>
+                Clicked="fishing_Clicked"/>
 
                 <!--Kalad-->
                 <Button
@@ -343,5 +339,4 @@
         </Grid>
         <!--Navbar end-->
     </Grid>
-
 </ContentPage>
