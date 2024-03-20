@@ -9,7 +9,7 @@ public partial class StartPage : ContentPage
     {
         InitializeComponent();
 
-        lstPopularFishSpecies.ItemsSource = EstonianApp.Services.FishService.GetFeaturedFish();
+        lstPopularFishSpecies.ItemsSource = EstonianApp.Services.FishService.GetFeaturedFishStartPage();
     }
     async void Fish_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {

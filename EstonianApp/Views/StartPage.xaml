@@ -16,16 +16,19 @@
 
         <VerticalStackLayout
             Margin="0,50,0,0">
+            
             <CollectionView
             x:Name="lstPopularFishSpecies"
             HeightRequest="190"
             SelectionMode="Single"
             SelectionChanged="Fish_SelectionChanged">
+                
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout 
                     Orientation="Horizontal"
                     ItemSpacing="12" />
                 </CollectionView.ItemsLayout>
+
                 <CollectionView.ItemTemplate>
                     <DataTemplate
                     x:DataType="models:Fish">
@@ -42,7 +45,7 @@
                             </Border.StrokeShape>
 
                             <Grid
-                            RowDefinitions="*, *, *"
+                            RowDefinitions="*, Auto, Auto"
                             RowSpacing="4">
 
                                 <Image 
@@ -57,7 +60,9 @@
                                 Style="{StaticResource AllFishHeaderStyle}"
                                 Text="{Binding Name}"
                                 TextColor="{StaticResource NormalTextColor}"
-                                Margin="0,4,0,0"/>
+                                Margin="0,4,0,0"
+                                HorizontalOptions="Center"/>
+                                
                             </Grid>
                         </Border>
                     </DataTemplate>
