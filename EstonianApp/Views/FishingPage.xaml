@@ -132,7 +132,7 @@
                 <!--Tasuta Püügiõigus-->
                 <Grid>
                     <VerticalStackLayout
-                Padding="24,24"
+                Padding="24,10"
                 VerticalOptions="Center">
 
                         <Label
@@ -193,7 +193,7 @@
 
                 <Grid>
                     <VerticalStackLayout
-                Padding="24,18"
+                Padding="24,12"
                 VerticalOptions="Center">
 
                         <Label
@@ -214,7 +214,7 @@
                 <!--Kalastus Kaart-->
                 <Grid>
                     <VerticalStackLayout
-                Padding="24,24"
+                Padding="24,10"
                 VerticalOptions="Center">
 
                         <Label
@@ -263,7 +263,7 @@
                 <!--Kalastus Reeglid-->
                 <Grid>
                     <VerticalStackLayout
-                Padding="24,24"
+                Padding="24,10"
                 VerticalOptions="Center">
 
                         <Label
