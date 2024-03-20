@@ -2,10 +2,11 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Views.StartPage"
-             BackgroundColor="{StaticResource PageBackgroundColor}">
+             BackgroundColor="{StaticResource PageBackgroundColor}"
+             xmlns:models="clr-namespace:EstonianApp.Models">
     <Grid>
-
         <!--Populaarsemad kalad-->
+
         <Label 
         Text="Populaarsemad kalad"
         TextColor="{StaticResource NormalTextColor}"
@@ -13,7 +14,59 @@
         HorizontalOptions="Start"
         Margin="12,0,0,0"/>
 
-        <RoundRectangle
+        <VerticalStackLayout
+            Margin="0,50,0,0">
+            <CollectionView
+            x:Name="lstPopularFishSpecies"
+            HeightRequest="190"
+            SelectionMode="Single"
+            SelectionChanged="Fish_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout 
+                    Orientation="Horizontal"
+                    ItemSpacing="12" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate
+                    x:DataType="models:Fish">
+                        <Border
+                        VerticalOptions="Fill"
+                        WidthRequest="170"
+                        HeightRequest="180"
+                        StrokeThickness="0"
+                        Background="{Binding Background}"
+                        Padding="16">
+
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="25" />
+                            </Border.StrokeShape>
+
+                            <Grid
+                            RowDefinitions="*, *, *"
+                            RowSpacing="4">
+
+                                <Image 
+                                Grid.Row="0"
+                                Source="{Binding HeroImage}"
+                                Rotation="-30"
+                                Aspect="AspectFit"
+                                VerticalOptions="Fill"
+                                HorizontalOptions="Fill"/>
+                                <Label
+                                Grid.Row="1"
+                                Style="{StaticResource AllFishHeaderStyle}"
+                                Text="{Binding Name}"
+                                TextColor="{StaticResource NormalTextColor}"
+                                Margin="0,4,0,0"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+       
+
+        <!--<RoundRectangle
         WidthRequest="190"
         HeightRequest="190"
         Fill="{StaticResource SecondaryBackgroundColor}"
@@ -29,7 +82,7 @@
         CornerRadius="25"
         HorizontalOptions="Start"
         VerticalOptions="Start"
-        Margin="215,50,0,0"/>
+        Margin="215,50,0,0"/>-->
 
 
         <!--Populaarsemad veekogud-->
