@@ -69,7 +69,7 @@
                         Margin="0,45,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Most popular..."/>
+                                <Span Text="Populaarsemad kalad..."/>
                                 <Span Text="→" FontSize="16" />
                             </FormattedString>
                         </Label.FormattedText>
@@ -109,7 +109,6 @@
                                         <Image 
                                             Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Rotation="-30"
                                             Aspect="AspectFit"
                                             VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
@@ -118,7 +117,8 @@
                                             Style="{StaticResource AllFishHeaderStyle}"
                                             Text="{Binding Name}"
                                             TextColor="{StaticResource NormalTextColor}"
-                                            Margin="0,4,0,0"/>
+                                            Margin="0,4,0,0"
+                                            HorizontalTextAlignment="Center"/>
                                     </Grid>
 
                                 </Border>
@@ -131,7 +131,7 @@
                         Margin="0,45,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="You may also like..."/>
+                                <Span Text="Kõik kalad..."/>
                                 <Span Text="→" FontSize="20" />
                             </FormattedString>
 
@@ -173,27 +173,25 @@
                                         <Image 
                                             Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Rotation="-30"
                                             Aspect="AspectFit"
-                                            VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
                                         <Label
                                             Grid.Row="1"
                                             Style="{StaticResource AllFishHeaderStyle}"
                                             TextColor="{StaticResource NormalTextColor}"
                                             Text="{Binding Name}"
-                                            Margin="0,4,0,0"/>
+                                            Margin="0,4,0,0"
+                                            HorizontalTextAlignment="Center"/>
                                     </Grid>
 
                                 </Border>
                             </DataTemplate>
-                            
+
                         </CollectionView.ItemTemplate>
 
                     </CollectionView>
 
                 </VerticalStackLayout>
-
             </ScrollView>
 
         </Grid>
@@ -318,7 +316,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="fish_Clicked"/>
+                Clicked="water_clicked"/>
 
                 <!--Kalastamine-->
                 <Button
@@ -327,7 +325,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="fish_Clicked"/>
+                Clicked="fishing_Clicked"/>
 
                 <!--Kalad-->
                 <Button
@@ -341,5 +339,4 @@
         </Grid>
         <!--Navbar end-->
     </Grid>
-
 </ContentPage>

@@ -24,7 +24,8 @@
             Grid.Column="0"
             HorizontalOptions="Start"
             VerticalOptions="Center"
-            Clicked="BackButton_Clicked"/>
+            Clicked="BackButton_Clicked"
+            BackgroundColor="{StaticResource SecondaryBackgroundColor}"/>
 
         <!--Main content scrollview-->
         <ScrollView
@@ -81,7 +82,7 @@
                 <!--Fish Images-->
                 <Label 
                 Style="{StaticResource FishHeaderSubtitleStyle}"
-                Text="Gallery"/>
+                Text="Pildid"/>
 
                 <CollectionView 
                 Margin="0,-6,0,0"

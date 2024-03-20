@@ -247,6 +247,7 @@
                 BorderColor="Transparent"
                 Clicked="kalastus_Clicked"/>
 
+
                 <!--Kalad-->
                 <Button
                 Grid.RowSpan="2"
