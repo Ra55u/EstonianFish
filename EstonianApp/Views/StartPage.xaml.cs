@@ -9,11 +9,16 @@ public partial class StartPage : ContentPage
     {
         InitializeComponent();
         lstPopularFishSpecies.ItemsSource = EstonianApp.Services.FishService.GetFeaturedFish();
+        lstPopularWaterType.ItemsSource = EstonianApp.Services.WaterService.GetFeaturedWater();
 
     }
     async void Fish_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         await Navigation.PushAsync(new FishDetailsPage(e.CurrentSelection.First() as Fish));
+    }
+    async void Water_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        await Navigation.PushAsync(new WaterDetailsPage(e.CurrentSelection.First() as Water));
     }
     async void kalastus_Clicked(System.Object sender, System.EventArgs e)
             => Application.Current.MainPage = new NavigationPage(new FishingPage());
