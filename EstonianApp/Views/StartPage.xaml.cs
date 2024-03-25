@@ -8,10 +8,10 @@ public partial class StartPage : ContentPage
     public StartPage()
     {
         InitializeComponent();
-
         lstPopularFishSpecies.ItemsSource = EstonianApp.Services.FishService.GetFeaturedFish();
+
     }
-    async void Fish_SelectionChanged(System.Object sender, SelectionChangedEventArgs e)
+    async void Fish_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         await Navigation.PushAsync(new FishDetailsPage(e.CurrentSelection.First() as Fish));
     }

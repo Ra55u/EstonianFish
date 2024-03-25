@@ -1,5 +1,6 @@
 ﻿using EstonianApp.Views;
 using Views;
+using EstonianApp.Models;
 
 namespace EstonianApp;
 
@@ -32,6 +33,6 @@ public partial class App : Application
 #endif
         });
 
-        MainPage = new NavigationPage(new WelcomePage());
+        MainPage = new NavigationPage(new StartPage());
     }
 }
