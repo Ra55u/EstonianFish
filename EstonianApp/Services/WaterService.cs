@@ -3,9 +3,9 @@
 
 namespace EstonianApp.Services
 {
-    internal static class FishService
+    internal static class WaterService
     {
-        private static List<Fish> fish = new()
+        private static List<Water> water = new()
         {
 
 
@@ -219,31 +219,31 @@ namespace EstonianApp.Services
                 }
         };
 
-        public static List<Fish> GetFeaturedFish()
+        public static List<Water> GetFeaturedWater()
         {
             var random = new Random();
-            var randomizedFish = fish.OrderBy(item => random.Next());
+            var randomizedWater = water.OrderBy(item => random.Next());
 
-            return randomizedFish.Take(3).ToList();
+            return randomizedWater.Take(3).ToList();
         }
 
-        public static List<Fish> SearchAndSortFish(string searchQuery)
+        public static List<Water> SearchAndSortWater(string searchQuery)
         {
             string query = searchQuery.ToLower();
 
-            return fish.Where(fish =>
-                fish.Name.ToLower().Contains(query) ||
-                fish.Description.ToLower().Contains(query)
+            return water.Where(water =>
+                water.Name.ToLower().Contains(query) ||
+                water.Description.ToLower().Contains(query)
             )
-            .OrderBy(fish => fish.Name)
-            .ThenBy(fish => fish.Description)
+            .OrderBy(water => water.Name)
+            .ThenBy(water => water.Description)
             .ToList();
         }
 
 
 
-        public static List<Fish> GetAllFish()
-            => fish;
+        public static List<Water> GetAllWater()
+            => water;
     }
 
 }

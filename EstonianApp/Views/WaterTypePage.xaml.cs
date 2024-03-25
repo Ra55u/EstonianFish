@@ -4,25 +4,25 @@ using Views;
 
 namespace EstonianApp.Views;
 
-public partial class FishSpeciesPage : ContentPage
+public partial class WaterTypePage : ContentPage
 {
     public ICommand SearchCommand { get; }
-    public FishSpeciesPage()
+    public WaterTypePage()
     {
         InitializeComponent();
         searchBar.SearchCommand = new Command<string>(async (searchQuery) =>
         {
-            var searchResults = Services.FishService.SearchAndSortFish(searchQuery);
-            await Navigation.PushAsync(new FishSearchResultsPage(searchResults));
+            var searchResults = Services.WaterService.SearchAndSortWater(searchQuery);
+            await Navigation.PushAsync(new WaterSearchResultsPage(searchResults));
         });
-        lstPopularFishSpecies.ItemsSource = Services.FishService.GetFeaturedFish();
-        lstAllFishSpecies.ItemsSource = Services.FishService.GetAllFish();
+        lstPopularWaterType.ItemsSource = Services.WaterService.GetFeaturedWater();
+        lstAllWaterType.ItemsSource = Services.WaterService.GetAllWater();
     }
-    async void Fish_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    async void Water_SelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        await Navigation.PushAsync(new FishDetailsPage(e.CurrentSelection.First() as Fish));
+        await Navigation.PushAsync(new WaterDetailsPage(e.CurrentSelection.First() as Water));
     }
-    async void fishing_clicked(System.Object sender, System.EventArgs e)
+    async void fishing_Clicked(System.Object sender, System.EventArgs e)
             => Application.Current.MainPage = new NavigationPage(new FishingPage());
     async void fish_Clicked(System.Object sender, System.EventArgs e)
         => Application.Current.MainPage = new NavigationPage(new FishSpeciesPage());
