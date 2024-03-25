@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EstonianApp.Views.FishDetailsPage">
+             x:Class="EstonianApp.Views.WaterDetailsPage">
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -24,7 +24,8 @@
             Grid.Column="0"
             HorizontalOptions="Start"
             VerticalOptions="Center"
-            Clicked="BackButton_Clicked"/>
+            Clicked="BackButton_Clicked"
+            BackgroundColor="{StaticResource SecondaryBackgroundColor}"/>
 
         <!--Main content scrollview-->
         <ScrollView
@@ -38,7 +39,7 @@
             <VerticalStackLayout
             Spacing="18">
 
-                <!--Fish image-->
+                <!--Water image-->
                 <Image 
                 Source="{Binding HeroImage}"
                 Aspect="AspectFit"
@@ -46,13 +47,13 @@
                 HeightRequest="240"
                 Margin="24,0"/>
 
-                <!--Fish name-->
+                <!--Water name-->
                 <Label 
                 Margin="0,-24,0,0"
                 Style="{StaticResource AllFishHeaderSubtitleStyle}"
                 Text="{Binding Name}"/>
 
-                <!--Fish Subtitle-->
+                <!--Water Subtitle-->
                 <Label 
                 Margin="0,-12,0,0"
                 Style="{StaticResource PageHeaderSubtitleStyle}"
@@ -65,7 +66,7 @@
                 Stroke="Transparent"
                 Fill="{StaticResource LightBorderColor}"/>
 
-                <!--Fish Info-->
+                <!--Water Info-->
                 <Label 
                 LineBreakMode="WordWrap"
                 Style="{StaticResource FishDetailsTextStyle}"
@@ -78,10 +79,10 @@
                 Stroke="Transparent"
                 Fill="{StaticResource LightBorderColor}"/>
 
-                <!--Fish Images-->
+                <!--Water Images-->
                 <Label 
                 Style="{StaticResource FishHeaderSubtitleStyle}"
-                Text="Gallery"/>
+                Text="Pildid"/>
 
                 <CollectionView 
                 Margin="0,-6,0,0"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="EstonianApp.Views.FishSpeciesPage"
+             x:Class="EstonianApp.Views.WaterTypePage"
              xmlns:models="clr-namespace:EstonianApp.Models">
 
     <Grid>
@@ -54,7 +54,7 @@
 
                             <SearchBar x:Name="searchBar" 
                             PlaceholderColor="{StaticResource SearchbarTextColor}"
-                            Placeholder="Search your favorite fish"
+                            Placeholder="Search your favorite water"
                             Grid.Column="1"
                             TextColor="{StaticResource SearchbarTextColor}"
                             BackgroundColor="{StaticResource SearchbarBackgroundColor}"
@@ -69,17 +69,17 @@
                         Margin="0,45,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Populaarsemad kalad..."/>
+                                <Span Text="Populaarsemad veekogud..."/>
                                 <Span Text="→" FontSize="16" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
 
                     <CollectionView
-                        x:Name="lstPopularFishSpecies"
+                        x:Name="lstPopularWaterType"
                         HeightRequest="160"
                         SelectionMode="Single"
-                        SelectionChanged="Fish_SelectionChanged">
+                        SelectionChanged="Water_SelectionChanged">
 
                         <CollectionView.ItemsLayout>
                             <LinearItemsLayout 
@@ -109,7 +109,6 @@
                                         <Image 
                                             Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Rotation="-30"
                                             Aspect="AspectFit"
                                             VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
@@ -118,7 +117,8 @@
                                             Style="{StaticResource AllFishHeaderStyle}"
                                             Text="{Binding Name}"
                                             TextColor="{StaticResource NormalTextColor}"
-                                            Margin="0,4,0,0"/>
+                                            Margin="0,4,0,0"
+                                            HorizontalTextAlignment="Center"/>
                                     </Grid>
 
                                 </Border>
@@ -131,7 +131,7 @@
                         Margin="0,45,0,0">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="Kõik kalad..."/>
+                                <Span Text="Kõik veekogud..."/>
                                 <Span Text="→" FontSize="20" />
                             </FormattedString>
 
@@ -139,10 +139,10 @@
                     </Label>
 
                     <CollectionView
-                        x:Name="lstAllFishSpecies"
+                        x:Name="lstAllWaterType"
                         HeightRequest="500"
                         SelectionMode="Single"
-                        SelectionChanged="Fish_SelectionChanged">
+                        SelectionChanged="Water_SelectionChanged">
 
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout
@@ -173,27 +173,25 @@
                                         <Image 
                                             Grid.Row="0"
                                             Source="{Binding HeroImage}"
-                                            Rotation="-30"
                                             Aspect="AspectFit"
-                                            VerticalOptions="Fill"
                                             HorizontalOptions="Fill"/>
                                         <Label
                                             Grid.Row="1"
                                             Style="{StaticResource AllFishHeaderStyle}"
                                             TextColor="{StaticResource NormalTextColor}"
                                             Text="{Binding Name}"
-                                            Margin="0,4,0,0"/>
+                                            Margin="0,4,0,0"
+                                            HorizontalTextAlignment="Center"/>
                                     </Grid>
 
                                 </Border>
                             </DataTemplate>
-                            
+
                         </CollectionView.ItemTemplate>
 
                     </CollectionView>
 
                 </VerticalStackLayout>
-
             </ScrollView>
 
         </Grid>
@@ -327,7 +325,7 @@
                 HeightRequest="93"
                 BackgroundColor="Transparent"
                 BorderColor="Transparent"
-                Clicked="fishing_clicked"/>
+                Clicked="fishing_Clicked"/>
 
                 <!--Kalad-->
                 <Button
@@ -341,5 +339,4 @@
         </Grid>
         <!--Navbar end-->
     </Grid>
-
 </ContentPage>
