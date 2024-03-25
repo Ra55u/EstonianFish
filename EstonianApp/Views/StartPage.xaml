@@ -12,58 +12,58 @@
         TextColor="{StaticResource NormalTextColor}"
         FontSize="25"
         HorizontalOptions="Start"
-        Margin="12,0,0,0"/>
+        Margin="12,50,0,0"/>
 
         <VerticalStackLayout
-            Margin="0,50,0,0"
+            Margin="0,100,0,0"
             VerticalOptions="Start">
 
             <CollectionView
-    x:Name="lstPopularFishSpecies"
-    HeightRequest="160"
-    SelectionMode="Single"
-    SelectionChanged="Fish_SelectionChanged">
+            x:Name="lstPopularFishSpecies"
+            HeightRequest="160"
+            SelectionMode="Single"
+            SelectionChanged="Fish_SelectionChanged">
 
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout 
-            Orientation="Horizontal"
-            ItemSpacing="12" />
+                    Orientation="Horizontal"
+                    ItemSpacing="12" />
                 </CollectionView.ItemsLayout>
 
                 <CollectionView.ItemTemplate>
                     <DataTemplate
-            x:DataType="models:Fish">
+                    x:DataType="models:Fish">
                         <Border
-                VerticalOptions="Fill"
-                WidthRequest="140"
-                HeightRequest="150"
-                StrokeThickness="0"
-                Background="{Binding Background}"
-                Padding="16">
+                        VerticalOptions="Fill"
+                        WidthRequest="140"
+                        HeightRequest="150"
+                        StrokeThickness="0"
+                        Background="{Binding Background}"
+                        Padding="16">
 
                             <Border.StrokeShape>
                                 <RoundRectangle CornerRadius="25" />
                             </Border.StrokeShape>
 
                             <Grid
-                    RowDefinitions="*, Auto, Auto"
-                    RowSpacing="4">
+                            RowDefinitions="*, Auto, Auto"
+                            RowSpacing="4">
 
                                 <Image 
-                        Grid.Row="0"
-                        Source="{Binding HeroImage}"
-                        Rotation="-30"
-                        Aspect="AspectFit"
-                        VerticalOptions="Fill"
-                        HorizontalOptions="Fill"/>
+                                Grid.Row="0"
+                                Source="{Binding HeroImage}"
+                                Rotation="-30"
+                                Aspect="AspectFit"
+                                VerticalOptions="Fill"
+                                HorizontalOptions="Fill"/>
                                 <Label
-                        Grid.Row="1"
-                        Style="{StaticResource AllFishHeaderStyle}"
-                        Text="{Binding Name}"
-                        TextColor="{StaticResource NormalTextColor}"
-                        Margin="0,4,0,0"/>
+                                Grid.Row="1"
+                                Style="{StaticResource AllFishHeaderStyle}"
+                                Text="{Binding Name}"
+                                TextColor="{StaticResource NormalTextColor}"
+                                Margin="0,4,0,0"
+                                HorizontalTextAlignment="Center"/>
                             </Grid>
-
                         </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -81,7 +81,8 @@
         Margin="12,0,0,200"/>
         
         <VerticalStackLayout
-            VerticalOptions="Center">
+            VerticalOptions="Center"
+            Margin="0,30,0,0">
 
             <CollectionView
             x:Name="lstPopularWaterType"
